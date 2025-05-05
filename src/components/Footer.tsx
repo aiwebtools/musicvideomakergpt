@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { AnimateScenesDropdown } from "./navigation/dropdowns/AnimateScenesDropdown";
+import { Music, Disc } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,7 +9,17 @@ const Footer = () => {
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold neon-text-purple mb-4">Music Video Maker GPT</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="relative">
+                <div className="h-8 w-8 rounded-full bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue flex items-center justify-center">
+                  <Music className="h-5 w-5 text-white animate-pulse-soft" />
+                  <div className="absolute inset-0 rounded-full flex items-center justify-center">
+                    <Disc className="h-8 w-8 text-neon-blue opacity-30 animate-spin-slow" />
+                  </div>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold font-audiowide gradient-text">Music Video Maker GPT</h3>
+            </div>
             <p className="text-sm text-gray-300">
               Transform your music into captivating visuals with our AI-powered music video generation tool.
             </p>

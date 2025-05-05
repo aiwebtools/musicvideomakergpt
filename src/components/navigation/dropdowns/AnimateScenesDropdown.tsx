@@ -196,16 +196,6 @@ export const AnimateScenesDropdown = ({ variant = 'header' }: AnimateScenesDropd
           <CollapsibleContent className="bg-black/70 animate-accordion-down">
             <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20 transition-colors duration-200">
               <a 
-                href="https://www.runway.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-full"
-              >
-                Runway
-              </a>
-            </DropdownMenuItem>
-            <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20 transition-colors duration-200">
-              <a 
                 href="https://www.capcut.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
