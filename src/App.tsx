@@ -1,10 +1,39 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+
+// Add a ScrollToTop component to handle scrolling to the section links
+const ScrollToTop = () => {
+  const { pathname, hash } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // If there's a hash in the URL
+    if (hash) {
+      // Check if the element exists
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      } else if (pathname === "/") {
+        // If we're on homepage and the element doesn't exist, navigate to the section on Index page
+        navigate(`/#${hash.substring(1)}`);
+      }
+    } else {
+      // If no hash, scroll to top
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash, navigate]);
+
+  return null;
+};
 
 const queryClient = new QueryClient();
 
@@ -14,6 +43,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

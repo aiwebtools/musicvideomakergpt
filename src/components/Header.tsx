@@ -38,7 +38,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-3">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="flex items-center gap-1 px-4 py-2 hover:bg-neon-purple/20">
+                <Button variant="outline" className="font-medium border-neon-purple/70 bg-black/40 hover:bg-neon-purple/30 hover:border-neon-purple text-white rounded-md px-4 py-2 flex items-center gap-1">
                   Animate Your Scenes <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -235,14 +235,14 @@ const Header = () => {
               href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="whitespace-nowrap px-3 py-2 rounded-md hover:bg-neon-purple/20 transition-colors"
+              className="font-medium bg-black/40 border border-neon-blue/70 text-white hover:bg-neon-blue/30 hover:border-neon-blue rounded-md px-4 py-2 transition-all duration-200"
             >
               Music Video Maker GPT
             </a>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="whitespace-nowrap px-3 py-2">
+                <Button variant="outline" className="font-medium border-neon-pink/70 bg-black/40 hover:bg-neon-pink/30 hover:border-neon-pink text-white rounded-md px-4 py-2">
                   Other Creative Production AI Tools
                 </Button>
               </DropdownMenuTrigger>
@@ -271,29 +271,17 @@ const Header = () => {
             </DropdownMenu>
 
             <a 
-              href="#faq" 
-              className="px-3 py-2 rounded-md hover:bg-neon-purple/20 transition-colors"
-            >
-              FAQ
-            </a>
-            <a 
-              href="#disclaimer" 
-              className="px-3 py-2 rounded-md hover:bg-neon-purple/20 transition-colors"
-            >
-              Disclaimer
-            </a>
-            <a 
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-3 py-2 rounded-md hover:bg-neon-purple/20 transition-colors"
+              className="font-medium bg-black/40 border border-neon-yellow/70 text-white hover:bg-neon-yellow/30 hover:border-neon-yellow rounded-md px-4 py-2 transition-all duration-200"
             >
               More AI Tools
             </a>
           </nav>
 
           {/* Mobile menu button */}
-          <Button onClick={toggleMenu} variant="ghost" size="icon" className="md:hidden">
+          <Button onClick={toggleMenu} variant="outline" size="icon" className="md:hidden border-neon-purple bg-black/40 hover:bg-neon-purple/20">
             {isMenuOpen ? <X /> : <Menu />}
           </Button>
         </div>
@@ -370,20 +358,6 @@ const Header = () => {
                 </div>
               </div>
 
-              <a 
-                href="#faq" 
-                className="text-foreground hover:text-neon-purple transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                FAQ
-              </a>
-              <a 
-                href="#disclaimer" 
-                className="text-foreground hover:text-neon-purple transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Disclaimer
-              </a>
               <a 
                 href="https://www.aiwebtools.ai" 
                 target="_blank" 
