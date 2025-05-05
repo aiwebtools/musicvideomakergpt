@@ -31,26 +31,20 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-1">
             <a 
               href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="relative px-4 py-2 rounded-md overflow-hidden group"
+              className="whitespace-nowrap px-3 py-2 rounded-md hover:bg-neon-purple/20 transition-colors"
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
-              <span className="relative text-foreground group-hover:text-neon-purple transition-colors">
-                Music Video Maker GPT
-              </span>
+              Music Video Maker GPT
             </a>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="relative px-4 py-2 rounded-md overflow-hidden group">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
-                  <span className="relative text-foreground group-hover:text-neon-purple transition-colors">
-                    Other Creative Production AI Tools
-                  </span>
+                <Button variant="ghost" className="whitespace-nowrap px-3 py-2">
+                  Other Creative Production AI Tools
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="glass border-neon-purple w-56">
@@ -79,32 +73,23 @@ const Header = () => {
 
             <a 
               href="#faq" 
-              className="relative px-4 py-2 rounded-md overflow-hidden group"
+              className="px-3 py-2 rounded-md hover:bg-neon-purple/20 transition-colors"
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
-              <span className="relative text-foreground group-hover:text-neon-purple transition-colors">
-                FAQ
-              </span>
+              FAQ
             </a>
             <a 
               href="#disclaimer" 
-              className="relative px-4 py-2 rounded-md overflow-hidden group"
+              className="px-3 py-2 rounded-md hover:bg-neon-purple/20 transition-colors"
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
-              <span className="relative text-foreground group-hover:text-neon-purple transition-colors">
-                Disclaimer
-              </span>
+              Disclaimer
             </a>
             <a 
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="relative px-4 py-2 rounded-md overflow-hidden group"
+              className="px-3 py-2 rounded-md hover:bg-neon-purple/20 transition-colors"
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
-              <span className="relative text-foreground group-hover:text-neon-purple transition-colors">
-                More AI Tools
-              </span>
+              More AI Tools
             </a>
           </nav>
 

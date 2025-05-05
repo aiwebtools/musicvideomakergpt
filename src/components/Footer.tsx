@@ -40,7 +40,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors"
               >
-                Movie Scene Maker Studio
+                AI Movie Production Studio
               </a>
               <a 
                 href="https://stagemasterai.lovable.app/?via=aiwebtools" 

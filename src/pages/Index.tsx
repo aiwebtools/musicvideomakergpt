@@ -7,6 +7,7 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
 import ToolsSection from '@/components/ToolsSection';
+import MusicProductionTools from '@/components/MusicProductionTools';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Disclaimer from '@/components/Disclaimer';
@@ -60,6 +61,7 @@ const Index = () => {
         <Features />
         <HowItWorks />
         <ToolsSection />
+        <MusicProductionTools />
         <Testimonials />
         <FAQ />
         <Disclaimer />
