@@ -1,6 +1,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import { Music4 } from "lucide-react";
 
 const Hero = () => {
   const videoRef = useRef<HTMLIFrameElement>(null);
@@ -33,18 +34,15 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button
-                className="bg-gradient-to-r from-neon-purple to-neon-blue text-white hover:opacity-90 rounded-full px-8 py-6 text-lg"
-                asChild
+              <a 
+                href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="golden-button flex items-center gap-2 text-lg"
               >
-                <a 
-                  href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Create Your Music Video
-                </a>
-              </Button>
+                <Music4 className="h-5 w-5" />
+                <span>Create Your Music Video</span>
+              </a>
               
               <Button
                 variant="outline"

@@ -13,7 +13,7 @@ const Logo = () => {
           </div>
         </div>
       </div>
-      <a href="#" className="text-2xl font-bold font-audiowide tracking-tight gradient-text">
+      <a href="#" className="text-2xl font-bold font-audiowide tracking-tight golden-text">
         Music Video Maker Studio
       </a>
     </div>

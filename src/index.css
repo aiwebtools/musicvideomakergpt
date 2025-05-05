@@ -120,6 +120,102 @@
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue;
   }
+  
+  /* New golden button styling */
+  .golden-button {
+    @apply relative overflow-hidden rounded-md px-6 py-3 font-bold text-amber-900 transition-all duration-500;
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.6), 
+                0 0 30px 5px rgba(255, 215, 0, 0.4), 
+                inset 0 0 10px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.3);
+    border: 2px solid #ffd700;
+    animation: gold-pulse 3s infinite, gold-shimmer 2s infinite;
+    transform-style: preserve-3d;
+  }
+  
+  .golden-button:hover {
+    @apply scale-105;
+    box-shadow: 0 0 25px 8px rgba(255, 215, 0, 0.8), 
+                0 0 40px 8px rgba(255, 215, 0, 0.6), 
+                inset 0 0 15px rgba(255, 255, 255, 0.9);
+    animation: gold-pulse 1.5s infinite, gold-shimmer 1s infinite;
+  }
+  
+  .golden-button::before {
+    content: "";
+    @apply absolute inset-0;
+    background: linear-gradient(45deg, 
+      transparent 25%, rgba(255, 255, 255, 0.4) 25%, 
+      rgba(255, 255, 255, 0.4) 50%, transparent 50%, 
+      transparent 75%, rgba(255, 255, 255, 0.4) 75%);
+    background-size: 20px 20px;
+    animation: gold-move 2s linear infinite;
+    opacity: 0.3;
+  }
+  
+  .golden-button::after {
+    content: "";
+    @apply absolute inset-0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .golden-button:hover::after {
+    opacity: 0.8;
+    animation: gold-radial-pulse 1.5s infinite;
+  }
+  
+  @keyframes gold-pulse {
+    0%, 100% { 
+      filter: brightness(1);
+    }
+    50% { 
+      filter: brightness(1.3);
+    }
+  }
+  
+  @keyframes gold-shimmer {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes gold-move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
+  }
+  
+  @keyframes gold-radial-pulse {
+    0%, 100% {
+      opacity: 0.2;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+  }
+  
+  .golden-text {
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.3);
+    animation: gold-shimmer 2s infinite;
+  }
 }
 
 /* Custom scrollbar */

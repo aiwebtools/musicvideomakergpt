@@ -18,7 +18,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <h3 className="text-xl font-bold font-audiowide gradient-text">Music Video Maker Studio</h3>
+              <h3 className="text-xl font-bold font-audiowide golden-text">Music Video Maker Studio</h3>
             </div>
             <p className="text-sm text-gray-300">
               Transform your music into captivating visuals with our AI-powered music video generation tool.
@@ -45,9 +45,10 @@ const Footer = () => {
                 href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
+                className="flex items-center gap-2 text-sm golden-text hover:scale-105 transition-transform duration-200"
               >
-                Music Video Maker Studio
+                <Music4 className="h-4 w-4" />
+                <span>Music Video Maker Studio</span>
               </a>
               <a 
                 href="https://moviemakerstudio.lovable.app/?via=aiwebtools" 
@@ -120,13 +121,13 @@ const Footer = () => {
             </div>
             <div className="pt-4">
               <a 
-                href="https://www.aiwebtools.ai" 
+                href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                className="golden-button flex items-center gap-2 text-sm"
               >
-                <Button className="rounded-full bg-gradient-to-r from-cyber-accent to-cyber-tertiary hover:opacity-90 hover:scale-105 text-white transition-all duration-300">
-                  More AI Tools
-                </Button>
+                <Music4 className="h-4 w-4" />
+                <span>Music Video Maker Studio</span>
               </a>
             </div>
           </div>

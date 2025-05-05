@@ -11,7 +11,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSeparator
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Music4 } from "lucide-react";
 import { AnimateScenesDropdown } from './dropdowns/AnimateScenesDropdown';
 import { OtherToolsDropdown } from './dropdowns/OtherToolsDropdown';
 
@@ -24,9 +24,10 @@ const DesktopNavigation = () => {
         href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="font-medium bg-black/40 border border-neon-blue/70 text-white hover:bg-neon-blue/30 hover:border-neon-blue rounded-md px-4 py-2 transition-all duration-200"
+        className="golden-button flex items-center gap-2"
       >
-        Music Video Maker Studio
+        <Music4 className="h-5 w-5" />
+        <span>Music Video Maker Studio</span>
       </a>
 
       <OtherToolsDropdown />
