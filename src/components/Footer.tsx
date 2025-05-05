@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { AnimateScenesDropdown } from "./navigation/dropdowns/AnimateScenesDropdown";
 import { Music4, Disc } from "lucide-react";
@@ -9,16 +8,26 @@ const Footer = () => {
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="relative">
-                <div className="h-8 w-8 rounded-full bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue flex items-center justify-center">
-                  <Music4 className="h-5 w-5 text-white animate-pulse-soft" />
-                  <div className="absolute inset-0 rounded-full flex items-center justify-center">
-                    <Disc className="h-8 w-8 text-neon-blue opacity-30 animate-spin-slow" />
+            <div className="flex flex-col mb-4">
+              <div className="flex items-center gap-2">
+                <div className="relative">
+                  <div className="h-8 w-8 rounded-full bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue flex items-center justify-center">
+                    <Music4 className="h-5 w-5 text-white animate-pulse-soft" />
+                    <div className="absolute inset-0 rounded-full flex items-center justify-center">
+                      <Disc className="h-8 w-8 text-neon-blue opacity-30 animate-spin-slow" />
+                    </div>
                   </div>
                 </div>
+                <h3 className="text-xl font-bold font-audiowide golden-text">Music Video Maker Studio</h3>
               </div>
-              <h3 className="text-xl font-bold font-audiowide golden-text">Music Video Maker Studio</h3>
+              <a 
+                href="https://www.aiwebtools.ai" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-xs text-gray-400 hover:text-neon-purple transition-colors duration-300 ml-10 -mt-1"
+              >
+                Presented by AiWebTools.Ai
+              </a>
             </div>
             <p className="text-sm text-gray-300">
               Transform your music into captivating visuals with our AI-powered music video generation tool.
@@ -48,7 +57,7 @@ const Footer = () => {
                 className="flex items-center gap-2 text-sm golden-text hover:scale-105 transition-transform duration-200"
               >
                 <Music4 className="h-4 w-4" />
-                <span>Music Video Maker Studio</span>
+                <span>Music Video Maker GPT</span>
               </a>
               <a 
                 href="https://moviemakerstudio.lovable.app/?via=aiwebtools" 
@@ -127,7 +136,7 @@ const Footer = () => {
                 className="golden-button flex items-center gap-2 text-sm"
               >
                 <Music4 className="h-4 w-4" />
-                <span>Music Video Maker Studio</span>
+                <span>Music Video Maker GPT</span>
               </a>
             </div>
           </div>

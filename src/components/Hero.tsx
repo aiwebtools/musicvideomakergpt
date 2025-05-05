@@ -41,7 +41,7 @@ const Hero = () => {
                 className="golden-button flex items-center gap-2 text-lg"
               >
                 <Music4 className="h-5 w-5" />
-                <span>Create Your Music Video</span>
+                <span>Music Video Maker GPT</span>
               </a>
               
               <Button

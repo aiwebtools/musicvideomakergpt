@@ -27,7 +27,7 @@ const DesktopNavigation = () => {
         className="golden-button flex items-center gap-2"
       >
         <Music4 className="h-5 w-5" />
-        <span>Music Video Maker Studio</span>
+        <span>Music Video Maker GPT</span>
       </a>
 
       <OtherToolsDropdown />
