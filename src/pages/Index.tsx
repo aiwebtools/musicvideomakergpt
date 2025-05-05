@@ -66,6 +66,30 @@ const Index = () => {
         <FAQ />
         <Disclaimer />
         <CTA />
+        
+        {/* Ideogram Image Section */}
+        <section className="py-16 px-4 overflow-hidden relative">
+          <div className="container mx-auto">
+            <div className="flex flex-col items-center justify-center">
+              <div className="max-w-4xl w-full">
+                <div className="relative rounded-2xl overflow-hidden border-4 border-neon-purple/30 shadow-2xl shadow-neon-purple/30">
+                  <img 
+                    src="https://ideogram.ai/assets/image/lossless/response/TiaFDh0wRKaB-TpDEpoF0Q" 
+                    alt="Music Video Maker Studio Visualization" 
+                    className="w-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-cyber-dark/90 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-sm text-center text-white/70">
+                      Visualization powered by Ideogram AI
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       
       <Footer />
