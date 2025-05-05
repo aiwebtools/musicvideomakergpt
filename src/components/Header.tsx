@@ -36,15 +36,21 @@ const Header = () => {
               href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-foreground hover:text-neon-purple transition-colors"
+              className="relative px-4 py-2 rounded-md overflow-hidden group"
             >
-              Music Video Maker GPT
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
+              <span className="relative text-foreground group-hover:text-neon-purple transition-colors">
+                Music Video Maker GPT
+              </span>
             </a>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="link" className="text-foreground hover:text-neon-purple transition-colors p-0">
-                  Other Creative Production AI Tools
+                <Button variant="ghost" className="relative px-4 py-2 rounded-md overflow-hidden group">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
+                  <span className="relative text-foreground group-hover:text-neon-purple transition-colors">
+                    Other Creative Production AI Tools
+                  </span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="glass border-neon-purple w-56">
@@ -55,7 +61,7 @@ const Header = () => {
                     rel="noopener noreferrer"
                     className="w-full"
                   >
-                    Movie Scene Maker Studio
+                    AI Movie Production Studio
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="hover:bg-neon-purple/20">
@@ -73,23 +79,32 @@ const Header = () => {
 
             <a 
               href="#faq" 
-              className="text-foreground hover:text-neon-purple transition-colors"
+              className="relative px-4 py-2 rounded-md overflow-hidden group"
             >
-              FAQ
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
+              <span className="relative text-foreground group-hover:text-neon-purple transition-colors">
+                FAQ
+              </span>
             </a>
             <a 
               href="#disclaimer" 
-              className="text-foreground hover:text-neon-purple transition-colors"
+              className="relative px-4 py-2 rounded-md overflow-hidden group"
             >
-              Disclaimer
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
+              <span className="relative text-foreground group-hover:text-neon-purple transition-colors">
+                Disclaimer
+              </span>
             </a>
             <a 
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-foreground hover:text-neon-purple transition-colors"
+              className="relative px-4 py-2 rounded-md overflow-hidden group"
             >
-              More AI Tools
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
+              <span className="relative text-foreground group-hover:text-neon-purple transition-colors">
+                More AI Tools
+              </span>
             </a>
           </nav>
 
@@ -121,7 +136,7 @@ const Header = () => {
                     rel="noopener noreferrer"
                     className="block text-foreground hover:text-neon-purple transition-colors"
                   >
-                    Movie Scene Maker Studio
+                    AI Movie Production Studio
                   </a>
                   <a 
                     href="https://stagemasterai.lovable.app/?via=aiwebtools" 
