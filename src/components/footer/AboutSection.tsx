@@ -17,7 +17,7 @@ export const AboutSection = () => {
     <div className="space-y-4">
       <FooterLogo />
       <p className="text-sm text-gray-300">
-        Transform your music into captivating visuals with our AI-powered music video generation tool.
+        Transform your music into captivating visuals with our AI-powered music video generation suite.
       </p>
       <div className="pt-4">
         {!isMobile ? (
