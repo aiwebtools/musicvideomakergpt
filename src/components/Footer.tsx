@@ -20,7 +20,7 @@ const Footer = () => {
                 href="https://www.aiwebtools.ai" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-xs text-muted-foreground hover:text-white"
+                className="text-xs text-muted-foreground hover:text-white transition-colors duration-300"
               >
                 Presented by AiWebTools.Ai
               </a>
@@ -34,7 +34,7 @@ const Footer = () => {
                 href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
               >
                 Music Video Maker GPT
               </a>
@@ -42,7 +42,7 @@ const Footer = () => {
                 href="https://moviemakerstudio.lovable.app/?via=aiwebtools" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
               >
                 AI Movie Production Studio
               </a>
@@ -50,19 +50,19 @@ const Footer = () => {
                 href="https://stagemasterai.lovable.app/?via=aiwebtools" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
               >
                 Stage Master AI Suite
               </a>
               <a 
                 href="#faq" 
-                className="block text-sm text-gray-300 hover:text-white transition-colors"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
               >
                 FAQ
               </a>
               <a 
                 href="#disclaimer" 
-                className="block text-sm text-gray-300 hover:text-white transition-colors"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
               >
                 Disclaimer
               </a>
@@ -76,7 +76,7 @@ const Footer = () => {
                 href="https://openai.com/policies/privacy-policy/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
               >
                 Privacy Policy
               </a>
@@ -84,7 +84,7 @@ const Footer = () => {
                 href="https://aiwebtools.ai/terms-of-services" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
               >
                 Terms of Service
               </a>
@@ -96,13 +96,13 @@ const Footer = () => {
             <div className="space-y-2">
               <a 
                 href="tel:4758008096" 
-                className="block text-sm text-gray-300 hover:text-white transition-colors"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
               >
                 (475) 800-8096
               </a>
               <a 
                 href="mailto:Contact@ai-webtools.com" 
-                className="block text-sm text-gray-300 hover:text-white transition-colors"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
               >
                 Contact@ai-webtools.com
               </a>
@@ -113,7 +113,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <Button className="rounded-full bg-gradient-to-r from-cyber-accent to-cyber-tertiary hover:opacity-90 text-white">
+                <Button className="rounded-full bg-gradient-to-r from-cyber-accent to-cyber-tertiary hover:opacity-90 hover:scale-105 text-white transition-all duration-300">
                   More AI Tools
                 </Button>
               </a>
@@ -126,7 +126,7 @@ const Footer = () => {
             href="https://www.aiwebtools.ai" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-sm text-gray-400 hover:text-white"
+            className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
           >
             © 2025 AI WEB TOOLS LLC All rights reserved.
           </a>
@@ -136,7 +136,7 @@ const Footer = () => {
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-gray-400 hover:text-white"
+              className="text-gray-400 hover:text-white transition-transform hover:scale-110 duration-300"
               aria-label="AiWebTools.Ai"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
