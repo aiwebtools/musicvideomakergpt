@@ -80,16 +80,6 @@ export const AboutSection = () => {
           </div>
         )}
       </div>
-      <div className="pt-2">
-        <a 
-          href="https://www.aiwebtools.ai" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="text-xs text-muted-foreground hover:text-white transition-colors duration-300"
-        >
-          Thank You For Using Music Video Maker Studio Presented by AiWebTools.Ai
-        </a>
-      </div>
     </div>
   );
 };

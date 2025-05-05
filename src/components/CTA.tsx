@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Music4 } from "lucide-react";
+import { Music4, Youtube } from "lucide-react";
 
 const CTA = () => {
   return (
@@ -50,6 +50,17 @@ const CTA = () => {
                 Explore More AI Tools
               </a>
             </Button>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <a 
+              href="https://www.aiwebtools.ai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-white transition-colors duration-300 inline-flex items-center gap-2"
+            >
+              Thank You For Using Music Video Maker Studio Presented by AiWebTools.Ai
+            </a>
           </div>
         </div>
       </div>
