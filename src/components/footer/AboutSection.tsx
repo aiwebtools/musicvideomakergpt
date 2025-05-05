@@ -72,6 +72,7 @@ export const AboutSection = () => {
                   <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${openSection === 'editing' ? 'rotate-180' : ''}`} />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="pl-4 space-y-2 pt-2 animate-accordion-down">
+                  <a href="https://www.videoleapapp.com/" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple py-1.5 transition-colors">VideoLeap</a>
                   <a href="https://www.capcut.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple py-1.5 transition-colors">CapCut</a>
                   <a href="https://download.wondershare.com/filmora_full846.exe?_gl=1*5tb5lz*_ga*MjEyMDY2ODg1OC4xNzQ2Mzc1ODk0*_ga_24WTSJBD5B*czE3NDYzNzU4OTMkbzEkZzEkdDE3NDYzNzU5MDAkajU0JGwwJGg0NzQwMjI0NjY.*_gcl_au*MTYxNzMzMTQ1Ni4xNzQ2Mzc1ODk1" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple py-1.5 transition-colors">Download Filmora</a>
                 </CollapsibleContent>

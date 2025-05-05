@@ -17,9 +17,9 @@ const ToolsSection = () => {
       description: "Generate original music to accompany your visuals, or create a soundtrack that perfectly matches your music video concept."
     },
     {
-      name: "Udio",
-      url: "https://www.udio.com",
-      description: "Professional audio tools to help you refine and enhance the sound quality of your music video soundtrack."
+      name: "VideoLeap",
+      url: "https://www.videoleapapp.com/",
+      description: "Professional video editing app with advanced effects, transitions, and tools to perfect your music videos."
     }
   ];
 

@@ -45,6 +45,7 @@ export const DROPDOWN_SECTIONS: SectionData[] = [
     id: 'editing',
     title: 'Editing Tools',
     links: [
+      { url: "https://www.videoleapapp.com/", label: "VideoLeap" },
       { url: "https://www.capcut.com", label: "CapCut" },
       { url: "https://download.wondershare.com/filmora_full846.exe?_gl=1*5tb5lz*_ga*MjEyMDY2ODg1OC4xNzQ2Mzc1ODk0*_ga_24WTSJBD5B*czE3NDYzNzU4OTMkbzEkZzEkdDE3NDYzNzU5MDAkajU0JGwwJGg0NzQwMjI0NjY.*_gcl_au*MTYxNzMzMTQ1Ni4xNzQ2Mzc1ODk1", label: "Download Filmora Editing Software" }
     ]
