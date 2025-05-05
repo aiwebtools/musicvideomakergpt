@@ -5,9 +5,13 @@ import {
   DropdownMenu, 
   DropdownMenuContent, 
   DropdownMenuItem, 
-  DropdownMenuTrigger 
+  DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
+  DropdownMenuSeparator
 } from "@/components/ui/dropdown-menu";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +35,182 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center gap-3">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="flex items-center gap-1 px-4 py-2 hover:bg-neon-purple/20">
+                  Animate Your Scenes <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="glass border-neon-purple w-72 bg-black/90 backdrop-blur-md">
+                <DropdownMenuSub>
+                  <DropdownMenuSubTrigger className="flex items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
+                    <span>Image to Video Generators</span>
+                    <ChevronDown className="h-5 w-5 ml-2 transition-transform rotate-[-90deg]" />
+                  </DropdownMenuSubTrigger>
+                  <DropdownMenuSubContent className="glass border-neon-purple bg-black/90 backdrop-blur-md min-w-[240px]">
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://veo.google" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        Google Veo 2
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://sora.openai.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        SORA
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://www.kling.ai" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        KLING
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://www.hailuo.ai" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        HAILUO
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://www.higgsfield.ai" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        HIGGSFIELD
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://runwayml.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        RunwayML
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://www.pika.art" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        PIKA LABS
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://chatgpt.com/g/g-3y5VbXUyL-text-to-video-prompt-generator" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        Text To Video Prompt Generator GPT
+                      </a>
+                    </DropdownMenuItem>
+                  </DropdownMenuSubContent>
+                </DropdownMenuSub>
+
+                <DropdownMenuSub>
+                  <DropdownMenuSubTrigger className="flex items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
+                    <span>Music & FX Generation</span>
+                    <ChevronDown className="h-5 w-5 ml-2 transition-transform rotate-[-90deg]" />
+                  </DropdownMenuSubTrigger>
+                  <DropdownMenuSubContent className="glass border-neon-purple bg-black/90 backdrop-blur-md">
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://suno.com/invite/@aiwebtools" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        SUNO
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://www.udio.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        UDIO
+                      </a>
+                    </DropdownMenuItem>
+                  </DropdownMenuSubContent>
+                </DropdownMenuSub>
+
+                <DropdownMenuSub>
+                  <DropdownMenuSubTrigger className="flex items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
+                    <span>Lipsync</span>
+                    <ChevronDown className="h-5 w-5 ml-2 transition-transform rotate-[-90deg]" />
+                  </DropdownMenuSubTrigger>
+                  <DropdownMenuSubContent className="glass border-neon-purple bg-black/90 backdrop-blur-md">
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://www.hedra.ai" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        Hedra
+                      </a>
+                    </DropdownMenuItem>
+                  </DropdownMenuSubContent>
+                </DropdownMenuSub>
+
+                <DropdownMenuSub>
+                  <DropdownMenuSubTrigger className="flex items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
+                    <span>Editing Tools</span>
+                    <ChevronDown className="h-5 w-5 ml-2 transition-transform rotate-[-90deg]" />
+                  </DropdownMenuSubTrigger>
+                  <DropdownMenuSubContent className="glass border-neon-purple bg-black/90 backdrop-blur-md">
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://www.runway.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        Runway
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://www.capcut.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        CapCut
+                      </a>
+                    </DropdownMenuItem>
+                  </DropdownMenuSubContent>
+                </DropdownMenuSub>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             <a 
               href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
               target="_blank" 
@@ -47,7 +226,7 @@ const Header = () => {
                   Other Creative Production AI Tools
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="glass border-neon-purple w-56">
+              <DropdownMenuContent className="glass border-neon-purple w-56 bg-black/90 backdrop-blur-md">
                 <DropdownMenuItem className="hover:bg-neon-purple/20">
                   <a 
                     href="https://moviemakerstudio.lovable.app/?via=aiwebtools" 
@@ -111,6 +290,41 @@ const Header = () => {
               >
                 Music Video Maker GPT
               </a>
+
+              {/* Mobile Animate Your Scenes */}
+              <div className="py-2">
+                <p className="font-medium mb-2">Animate Your Scenes:</p>
+                <div className="space-y-2 pl-4">
+                  <p className="text-sm font-medium mt-2 mb-1">Image to Video Generators:</p>
+                  <div className="space-y-1 pl-2">
+                    <a href="https://veo.google" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Google Veo 2</a>
+                    <a href="https://sora.openai.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">SORA</a>
+                    <a href="https://www.kling.ai" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">KLING</a>
+                    <a href="https://www.hailuo.ai" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">HAILUO</a>
+                    <a href="https://www.higgsfield.ai" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">HIGGSFIELD</a>
+                    <a href="https://runwayml.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">RunwayML</a>
+                    <a href="https://www.pika.art" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">PIKA LABS</a>
+                    <a href="https://chatgpt.com/g/g-3y5VbXUyL-text-to-video-prompt-generator" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Text To Video Prompt Generator GPT</a>
+                  </div>
+                  
+                  <p className="text-sm font-medium mt-2 mb-1">Music & FX Generation:</p>
+                  <div className="space-y-1 pl-2">
+                    <a href="https://suno.com/invite/@aiwebtools" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">SUNO</a>
+                    <a href="https://www.udio.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">UDIO</a>
+                  </div>
+                  
+                  <p className="text-sm font-medium mt-2 mb-1">Lipsync:</p>
+                  <div className="space-y-1 pl-2">
+                    <a href="https://www.hedra.ai" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Hedra</a>
+                  </div>
+                  
+                  <p className="text-sm font-medium mt-2 mb-1">Editing Tools:</p>
+                  <div className="space-y-1 pl-2">
+                    <a href="https://www.runway.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Runway</a>
+                    <a href="https://www.capcut.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">CapCut</a>
+                  </div>
+                </div>
+              </div>
 
               <div className="py-2">
                 <p className="font-medium mb-2">Other Creative Production AI Tools:</p>
