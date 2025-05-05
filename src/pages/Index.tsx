@@ -11,6 +11,7 @@ import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Disclaimer from '@/components/Disclaimer';
 import CTA from '@/components/CTA';
+import CyberGrid from '@/components/CyberGrid';
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -45,6 +46,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <CyberGrid />
       <Header />
       
       <ConsentModal 

@@ -7,8 +7,7 @@ const Hero = () => {
   
   return (
     <section className="relative overflow-hidden pt-16 pb-20">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-grid -z-10"></div>
+      {/* Background elements - removed static grid in favor of CyberGrid component */}
       <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark/90 to-cyber-darker -z-10"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-tertiary/20 rounded-full blur-[100px] -z-10"></div>
       

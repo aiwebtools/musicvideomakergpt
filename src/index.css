@@ -99,14 +99,6 @@
                 0 0 30px theme('colors.neon.purple');
   }
 
-  .bg-grid {
-    background-image: linear-gradient(theme('colors.neon.purple') 1px, transparent 1px),
-                      linear-gradient(90deg, theme('colors.neon.purple') 1px, transparent 1px);
-    background-size: 40px 40px;
-    background-position: center center;
-    opacity: 0.1;
-  }
-
   .cyber-button {
     @apply relative overflow-hidden border border-neon-blue text-neon-blue font-bold 
            bg-transparent transition-all duration-300 hover:bg-neon-blue/20;
