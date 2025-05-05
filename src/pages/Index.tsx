@@ -1,12 +1,70 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState, useEffect } from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import ConsentModal from '@/components/ConsentModal';
+import Hero from '@/components/Hero';
+import Features from '@/components/Features';
+import HowItWorks from '@/components/HowItWorks';
+import ToolsSection from '@/components/ToolsSection';
+import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
+import Disclaimer from '@/components/Disclaimer';
+import CTA from '@/components/CTA';
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const [showConsent, setShowConsent] = useState(false);
+  const { toast } = useToast();
+  
+  useEffect(() => {
+    // Check if user has already accepted the terms
+    const hasAccepted = localStorage.getItem('consentAccepted');
+    
+    if (!hasAccepted) {
+      setShowConsent(true);
+    }
+  }, []);
+  
+  const handleAccept = () => {
+    localStorage.setItem('consentAccepted', 'true');
+    setShowConsent(false);
+    toast({
+      title: "Welcome to Music Video Maker GPT!",
+      description: "Start creating your professional music video now.",
+    });
+  };
+  
+  const handleDecline = () => {
+    toast({
+      variant: "destructive",
+      title: "Consent Required",
+      description: "You must accept the terms to use this website.",
+    });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <ConsentModal 
+        open={showConsent} 
+        onAccept={handleAccept} 
+        onDecline={handleDecline} 
+      />
+      
+      <main className="flex-grow">
+        <Hero />
+        <Features />
+        <HowItWorks />
+        <ToolsSection />
+        <Testimonials />
+        <FAQ />
+        <Disclaimer />
+        <CTA />
+      </main>
+      
+      <Footer />
     </div>
   );
 };

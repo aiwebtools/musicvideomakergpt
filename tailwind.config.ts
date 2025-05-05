@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Cyberpunk theme colors
+				neon: {
+					pink: '#FF00FF',
+					blue: '#00FFFF',
+					purple: '#B026FF',
+					yellow: '#FFFF00',
+				},
+				cyber: {
+					dark: '#0a0a15',
+					darker: '#050510',
+					primary: '#4361ee',
+					accent: '#ff00ff',
+					secondary: '#00ffff',
+					tertiary: '#7b2cbf',
 				}
 			},
 			borderRadius: {
@@ -70,25 +86,52 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
+				},
+				'glow': {
+					'0%, 100%': { filter: 'brightness(1)' },
+					'50%': { filter: 'brightness(1.2)' },
+				},
+				'pulse-soft': {
+					'0%, 100%': { opacity: '.8' },
+					'50%': { opacity: '1' },
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' },
+				},
+				'neon-flicker': {
+					'0%, 100%': { opacity: '1' },
+					'33%': { opacity: '0.8' },
+					'66%': { opacity: '0.9' },
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '200% 0' },
+					'100%': { backgroundPosition: '-200% 0' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite',
+				'pulse-soft': 'pulse-soft 3s infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'spin-slow': 'spin-slow 8s linear infinite',
+				'neon-flicker': 'neon-flicker 2s infinite',
+				'shimmer': 'shimmer 3s linear infinite',
+			},
+			backgroundImage: {
+				'cyber-grid': "url('/images/cyber-grid.png')",
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			}
 		}
 	},
