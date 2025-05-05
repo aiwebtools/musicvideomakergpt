@@ -51,17 +51,17 @@ const Header = () => {
                   <DropdownMenuSubContent className="glass border-neon-purple bg-black/90 backdrop-blur-md min-w-[240px]">
                     <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
                       <a 
-                        href="https://veo.google" 
+                        href="https://aistudio.google.com/generate-video" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-full"
                       >
-                        Google Veo 2
+                        Google VEO
                       </a>
                     </DropdownMenuItem>
                     <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
                       <a 
-                        href="https://sora.openai.com" 
+                        href="https://www.sora.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-full"
@@ -71,7 +71,7 @@ const Header = () => {
                     </DropdownMenuItem>
                     <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
                       <a 
-                        href="https://www.kling.ai" 
+                        href="https://klingai.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-full"
@@ -81,7 +81,7 @@ const Header = () => {
                     </DropdownMenuItem>
                     <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
                       <a 
-                        href="https://www.hailuo.ai" 
+                        href="https://hailuoai.video" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-full"
@@ -91,7 +91,7 @@ const Header = () => {
                     </DropdownMenuItem>
                     <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
                       <a 
-                        href="https://www.higgsfield.ai" 
+                        href="https://higgsfield.ai" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-full"
@@ -111,7 +111,7 @@ const Header = () => {
                     </DropdownMenuItem>
                     <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
                       <a 
-                        href="https://www.pika.art" 
+                        href="https://pika.art" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-full"
@@ -121,7 +121,7 @@ const Header = () => {
                     </DropdownMenuItem>
                     <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
                       <a 
-                        href="https://chatgpt.com/g/g-3y5VbXUyL-text-to-video-prompt-generator" 
+                        href="https://texttovideoprompter.lovable.app/?via=aiwebtools" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-full"
@@ -145,7 +145,7 @@ const Header = () => {
                         rel="noopener noreferrer"
                         className="w-full"
                       >
-                        SUNO
+                        SUNO Music Generator
                       </a>
                     </DropdownMenuItem>
                     <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
@@ -155,7 +155,17 @@ const Header = () => {
                         rel="noopener noreferrer"
                         className="w-full"
                       >
-                        UDIO
+                        UDIO Music Generator
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://elevenlabs.io/?from=kennybastian5304" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        Eleven Labs Voice & Sound Effect Generator
                       </a>
                     </DropdownMenuItem>
                   </DropdownMenuSubContent>
@@ -169,12 +179,12 @@ const Header = () => {
                   <DropdownMenuSubContent className="glass border-neon-purple bg-black/90 backdrop-blur-md">
                     <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
                       <a 
-                        href="https://www.hedra.ai" 
+                        href="https://www.hedra.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-full"
                       >
-                        Hedra
+                        HEDRA
                       </a>
                     </DropdownMenuItem>
                   </DropdownMenuSubContent>
@@ -204,6 +214,16 @@ const Header = () => {
                         className="w-full"
                       >
                         CapCut
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
+                      <a 
+                        href="https://download.wondershare.com/filmora_full846.exe?_gl=1*5tb5lz*_ga*MjEyMDY2ODg1OC4xNzQ2Mzc1ODk0*_ga_24WTSJBD5B*czE3NDYzNzU4OTMkbzEkZzEkdDE3NDYzNzU5MDAkajU0JGwwJGg0NzQwMjI0NjY.*_gcl_au*MTYxNzMzMTQ1Ni4xNzQ2Mzc1ODk1" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        Download Filmora Editing Software
                       </a>
                     </DropdownMenuItem>
                   </DropdownMenuSubContent>
@@ -297,31 +317,33 @@ const Header = () => {
                 <div className="space-y-2 pl-4">
                   <p className="text-sm font-medium mt-2 mb-1">Image to Video Generators:</p>
                   <div className="space-y-1 pl-2">
-                    <a href="https://veo.google" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Google Veo 2</a>
-                    <a href="https://sora.openai.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">SORA</a>
-                    <a href="https://www.kling.ai" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">KLING</a>
-                    <a href="https://www.hailuo.ai" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">HAILUO</a>
-                    <a href="https://www.higgsfield.ai" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">HIGGSFIELD</a>
+                    <a href="https://aistudio.google.com/generate-video" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Google VEO</a>
+                    <a href="https://www.sora.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">SORA</a>
+                    <a href="https://klingai.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">KLING</a>
+                    <a href="https://hailuoai.video" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">HAILUO</a>
+                    <a href="https://higgsfield.ai" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">HIGGSFIELD</a>
                     <a href="https://runwayml.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">RunwayML</a>
-                    <a href="https://www.pika.art" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">PIKA LABS</a>
-                    <a href="https://chatgpt.com/g/g-3y5VbXUyL-text-to-video-prompt-generator" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Text To Video Prompt Generator GPT</a>
+                    <a href="https://pika.art" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">PIKA LABS</a>
+                    <a href="https://texttovideoprompter.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Text To Video Prompt Generator GPT</a>
                   </div>
                   
                   <p className="text-sm font-medium mt-2 mb-1">Music & FX Generation:</p>
                   <div className="space-y-1 pl-2">
-                    <a href="https://suno.com/invite/@aiwebtools" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">SUNO</a>
-                    <a href="https://www.udio.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">UDIO</a>
+                    <a href="https://suno.com/invite/@aiwebtools" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">SUNO Music Generator</a>
+                    <a href="https://www.udio.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">UDIO Music Generator</a>
+                    <a href="https://elevenlabs.io/?from=kennybastian5304" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Eleven Labs Voice & Sound Effect Generator</a>
                   </div>
                   
                   <p className="text-sm font-medium mt-2 mb-1">Lipsync:</p>
                   <div className="space-y-1 pl-2">
-                    <a href="https://www.hedra.ai" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Hedra</a>
+                    <a href="https://www.hedra.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">HEDRA</a>
                   </div>
                   
                   <p className="text-sm font-medium mt-2 mb-1">Editing Tools:</p>
                   <div className="space-y-1 pl-2">
                     <a href="https://www.runway.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Runway</a>
                     <a href="https://www.capcut.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">CapCut</a>
+                    <a href="https://download.wondershare.com/filmora_full846.exe?_gl=1*5tb5lz*_ga*MjEyMDY2ODg1OC4xNzQ2Mzc1ODk0*_ga_24WTSJBD5B*czE3NDYzNzU4OTMkbzEkZzEkdDE3NDYzNzU5MDAkajU0JGwwJGg0NzQwMjI0NjY.*_gcl_au*MTYxNzMzMTQ1Ni4xNzQ2Mzc1ODk1" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-300 hover:text-neon-purple">Download Filmora Editing Software</a>
                   </div>
                 </div>
               </div>
