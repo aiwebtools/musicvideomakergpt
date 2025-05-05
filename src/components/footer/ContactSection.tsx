@@ -26,7 +26,7 @@ export const ContactSection = () => {
           rel="noopener noreferrer"
           className="golden-button flex items-center gap-2 text-sm"
         >
-          <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+          <Star className="h-4 w-4 text-yellow-400" strokeWidth={2} fill="yellow" />
           <Music4 className="h-4 w-4" />
           <span>Music Video Maker GPT</span>
         </a>
