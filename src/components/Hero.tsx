@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="space-y-6">
             <div className="inline-block p-1 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue rounded-lg mb-4">
               <div className="px-3 py-1 bg-cyber-darker/80 rounded text-sm font-medium text-white">
-                Next-Gen AI Production Tools
+                Full-Blown Music Video & Music Production Creative Suite
               </div>
             </div>
             
@@ -28,7 +28,7 @@ const Hero = () => {
             
             <p className="text-lg text-gray-300 max-w-xl">
               Transform yourself into the star of cinematic-quality music videos with our cutting-edge AI director. 
-              Build scene-by-scene visuals where <span className="text-neon-purple">you</span> are featured in vivid, 
+              Build scene-by-scene visuals where <span className="text-neon-purple">you and even your band</span> are featured in vivid, 
               realistic scenes tied to your music.
             </p>
             
@@ -72,6 +72,9 @@ const Hero = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
+              <div className="absolute bottom-4 right-4 bg-black/70 px-2 py-1 rounded text-xs text-white">
+                Music Video Based On a True Story
+              </div>
             </div>
             
             {/* Decorative elements */}
