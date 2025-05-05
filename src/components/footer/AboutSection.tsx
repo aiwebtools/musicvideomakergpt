@@ -87,7 +87,7 @@ export const AboutSection = () => {
           rel="noopener noreferrer"
           className="text-xs text-muted-foreground hover:text-white transition-colors duration-300"
         >
-          Presented by AiWebTools.Ai
+          Thank You For Using Music Video Maker Studio Presented by AiWebTools.Ai
         </a>
       </div>
     </div>
