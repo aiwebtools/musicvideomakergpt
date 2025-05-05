@@ -6,6 +6,20 @@ import { Music4 } from "lucide-react";
 const Hero = () => {
   const videoRef = useRef<HTMLIFrameElement>(null);
   
+  useEffect(() => {
+    // Force video to play after component mounts
+    const timer = setTimeout(() => {
+      if (videoRef.current) {
+        // Try to reload the iframe with autoplay settings
+        const currentSrc = videoRef.current.src;
+        videoRef.current.src = ''; 
+        videoRef.current.src = currentSrc;
+      }
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+  
   return (
     <section className="relative overflow-hidden pt-16 pb-20">
       {/* Background elements - removed static grid in favor of CyberGrid component */}
@@ -65,9 +79,9 @@ const Hero = () => {
               <iframe
                 ref={videoRef}
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/rBQTUrvHcR8?si=mTNmC364Ahk1hEeQ&autoplay=1&mute=0&controls=1&rel=0&showinfo=0"
+                src="https://www.youtube.com/embed/rBQTUrvHcR8?autoplay=1&mute=0&enablejsapi=1&origin=https://musicvideomakerstudio.com&playlist=rBQTUrvHcR8&loop=1"
                 title="Music Video Maker Studio Demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
               <div className="absolute bottom-4 right-4 bg-black/70 px-2 py-1 rounded text-xs text-white">
