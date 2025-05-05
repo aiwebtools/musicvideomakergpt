@@ -1,5 +1,5 @@
 
-import { Music4 } from "lucide-react";
+import { Music4, Star } from "lucide-react";
 
 export const ContactSection = () => {
   return (
@@ -26,6 +26,7 @@ export const ContactSection = () => {
           rel="noopener noreferrer"
           className="golden-button flex items-center gap-2 text-sm"
         >
+          <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
           <Music4 className="h-4 w-4" />
           <span>Music Video Maker GPT</span>
         </a>
