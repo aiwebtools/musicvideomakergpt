@@ -6,27 +6,35 @@ import {
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger,
-  DropdownMenuSub,
-  DropdownMenuSubTrigger,
-  DropdownMenuSubContent
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
-export const AnimateScenesDropdown = () => {
+interface AnimateScenesDropdownProps {
+  variant?: 'header' | 'footer';
+}
+
+export const AnimateScenesDropdown = ({ variant = 'header' }: AnimateScenesDropdownProps) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="font-medium border-neon-purple/70 bg-black/40 hover:bg-neon-purple/30 hover:border-neon-purple text-white rounded-md px-4 py-2 flex items-center gap-1">
+        <Button 
+          variant="outline" 
+          className={variant === 'header' 
+            ? "font-medium border-neon-purple/70 bg-black/40 hover:bg-neon-purple/30 hover:border-neon-purple text-white rounded-md px-4 py-2 flex items-center gap-1" 
+            : "font-medium bg-black/40 border border-neon-purple/70 text-white hover:bg-neon-purple/30 hover:border-neon-purple rounded-md px-4 py-2 transition-all duration-200"}
+        >
           Animate Your Scenes <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="glass border-neon-purple w-72 bg-black/90 backdrop-blur-md">
-        <DropdownMenuSub>
-          <DropdownMenuSubTrigger className="flex items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
+      <DropdownMenuContent className="glass border-neon-purple w-72 bg-black/90 backdrop-blur-md z-50">
+        <Collapsible className="w-full">
+          <CollapsibleTrigger className="flex w-full items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
             <span>Image to Video Generators</span>
-            <ChevronDown className="h-5 w-5 ml-2 transition-transform rotate-[-90deg]" />
-          </DropdownMenuSubTrigger>
-          <DropdownMenuSubContent className="glass border-neon-purple bg-black/90 backdrop-blur-md min-w-[240px]">
+            <ChevronDown className="h-5 w-5 ml-2 transition-transform ui-open:rotate-180" />
+          </CollapsibleTrigger>
+          <CollapsibleContent className="bg-black/70">
             <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
               <a 
                 href="https://aistudio.google.com/generate-video" 
@@ -107,15 +115,17 @@ export const AnimateScenesDropdown = () => {
                 Text To Video Prompt Generator GPT
               </a>
             </DropdownMenuItem>
-          </DropdownMenuSubContent>
-        </DropdownMenuSub>
+          </CollapsibleContent>
+        </Collapsible>
 
-        <DropdownMenuSub>
-          <DropdownMenuSubTrigger className="flex items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
+        <DropdownMenuSeparator className="bg-neon-purple/30" />
+
+        <Collapsible className="w-full">
+          <CollapsibleTrigger className="flex w-full items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
             <span>Music & FX Generation</span>
-            <ChevronDown className="h-5 w-5 ml-2 transition-transform rotate-[-90deg]" />
-          </DropdownMenuSubTrigger>
-          <DropdownMenuSubContent className="glass border-neon-purple bg-black/90 backdrop-blur-md">
+            <ChevronDown className="h-5 w-5 ml-2 transition-transform ui-open:rotate-180" />
+          </CollapsibleTrigger>
+          <CollapsibleContent className="bg-black/70">
             <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
               <a 
                 href="https://suno.com/invite/@aiwebtools" 
@@ -146,15 +156,17 @@ export const AnimateScenesDropdown = () => {
                 Eleven Labs Voice & Sound Effect Generator
               </a>
             </DropdownMenuItem>
-          </DropdownMenuSubContent>
-        </DropdownMenuSub>
+          </CollapsibleContent>
+        </Collapsible>
 
-        <DropdownMenuSub>
-          <DropdownMenuSubTrigger className="flex items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
+        <DropdownMenuSeparator className="bg-neon-purple/30" />
+
+        <Collapsible className="w-full">
+          <CollapsibleTrigger className="flex w-full items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
             <span>Lipsync</span>
-            <ChevronDown className="h-5 w-5 ml-2 transition-transform rotate-[-90deg]" />
-          </DropdownMenuSubTrigger>
-          <DropdownMenuSubContent className="glass border-neon-purple bg-black/90 backdrop-blur-md">
+            <ChevronDown className="h-5 w-5 ml-2 transition-transform ui-open:rotate-180" />
+          </CollapsibleTrigger>
+          <CollapsibleContent className="bg-black/70">
             <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
               <a 
                 href="https://www.hedra.com" 
@@ -165,15 +177,17 @@ export const AnimateScenesDropdown = () => {
                 HEDRA
               </a>
             </DropdownMenuItem>
-          </DropdownMenuSubContent>
-        </DropdownMenuSub>
+          </CollapsibleContent>
+        </Collapsible>
 
-        <DropdownMenuSub>
-          <DropdownMenuSubTrigger className="flex items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
+        <DropdownMenuSeparator className="bg-neon-purple/30" />
+
+        <Collapsible className="w-full">
+          <CollapsibleTrigger className="flex w-full items-center justify-between px-4 py-3 text-lg font-medium hover:bg-neon-purple/20">
             <span>Editing Tools</span>
-            <ChevronDown className="h-5 w-5 ml-2 transition-transform rotate-[-90deg]" />
-          </DropdownMenuSubTrigger>
-          <DropdownMenuSubContent className="glass border-neon-purple bg-black/90 backdrop-blur-md">
+            <ChevronDown className="h-5 w-5 ml-2 transition-transform ui-open:rotate-180" />
+          </CollapsibleTrigger>
+          <CollapsibleContent className="bg-black/70">
             <DropdownMenuItem className="px-4 py-2.5 hover:bg-neon-purple/20">
               <a 
                 href="https://www.runway.com" 
@@ -204,8 +218,8 @@ export const AnimateScenesDropdown = () => {
                 Download Filmora Editing Software
               </a>
             </DropdownMenuItem>
-          </DropdownMenuSubContent>
-        </DropdownMenuSub>
+          </CollapsibleContent>
+        </Collapsible>
       </DropdownMenuContent>
     </DropdownMenu>
   );

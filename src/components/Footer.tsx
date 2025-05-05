@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { AnimateScenesDropdown } from "./navigation/dropdowns/AnimateScenesDropdown";
 
 const Footer = () => {
   return (
@@ -11,7 +12,10 @@ const Footer = () => {
             <p className="text-sm text-gray-300">
               Transform your music into captivating visuals with our AI-powered music video generation tool.
             </p>
-            <div className="pt-4">
+            <div className="pt-4 flex space-x-3">
+              <AnimateScenesDropdown variant="footer" />
+            </div>
+            <div className="pt-2">
               <a 
                 href="https://www.aiwebtools.ai" 
                 target="_blank" 
