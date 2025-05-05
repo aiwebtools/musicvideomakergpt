@@ -26,7 +26,7 @@ const DesktopNavigation = () => {
         rel="noopener noreferrer" 
         className="font-medium bg-black/40 border border-neon-blue/70 text-white hover:bg-neon-blue/30 hover:border-neon-blue rounded-md px-4 py-2 transition-all duration-200"
       >
-        Music Video Maker GPT
+        Music Video Maker Studio
       </a>
 
       <OtherToolsDropdown />

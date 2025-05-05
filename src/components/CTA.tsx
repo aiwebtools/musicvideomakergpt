@@ -21,7 +21,7 @@ const CTA = () => {
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Transform your music into stunning visuals with Music Video Maker GPT. 
+            Transform your music into stunning visuals with Music Video Maker Studio. 
             Create professional-quality music videos where you're the star.
           </p>
           

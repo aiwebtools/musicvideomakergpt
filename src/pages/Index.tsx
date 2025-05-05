@@ -32,7 +32,7 @@ const Index = () => {
     localStorage.setItem('consentAccepted', 'true');
     setShowConsent(false);
     toast({
-      title: "Welcome to Music Video Maker GPT!",
+      title: "Welcome to Music Video Maker Studio!",
       description: "Start creating your professional music video now.",
     });
   };

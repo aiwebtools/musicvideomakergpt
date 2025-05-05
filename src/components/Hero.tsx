@@ -22,7 +22,7 @@ const Hero = () => {
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
-                Music Video Maker GPT
+                Music Video Maker Studio
               </span>
             </h1>
             
@@ -68,7 +68,7 @@ const Hero = () => {
                 ref={videoRef}
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/rBQTUrvHcR8?si=mTNmC364Ahk1hEeQ&autoplay=1&mute=0&controls=1&rel=0&showinfo=0"
-                title="Music Video Maker GPT Demo"
+                title="Music Video Maker Studio Demo"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>

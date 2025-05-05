@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { AnimateScenesDropdown } from "./navigation/dropdowns/AnimateScenesDropdown";
-import { Music, Disc } from "lucide-react";
+import { Music4, Disc } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -12,13 +12,13 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <div className="relative">
                 <div className="h-8 w-8 rounded-full bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue flex items-center justify-center">
-                  <Music className="h-5 w-5 text-white animate-pulse-soft" />
+                  <Music4 className="h-5 w-5 text-white animate-pulse-soft" />
                   <div className="absolute inset-0 rounded-full flex items-center justify-center">
                     <Disc className="h-8 w-8 text-neon-blue opacity-30 animate-spin-slow" />
                   </div>
                 </div>
               </div>
-              <h3 className="text-xl font-bold font-audiowide gradient-text">Music Video Maker GPT</h3>
+              <h3 className="text-xl font-bold font-audiowide gradient-text">Music Video Maker Studio</h3>
             </div>
             <p className="text-sm text-gray-300">
               Transform your music into captivating visuals with our AI-powered music video generation tool.
@@ -47,7 +47,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
               >
-                Music Video Maker GPT
+                Music Video Maker Studio
               </a>
               <a 
                 href="https://moviemakerstudio.lovable.app/?via=aiwebtools" 
