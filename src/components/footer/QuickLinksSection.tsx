@@ -1,5 +1,5 @@
 
-import { Music4 } from "lucide-react";
+import { Music4, Video, Layers, HelpCircle, AlertTriangle, Theater } from "lucide-react";
 
 export const QuickLinksSection = () => {
   return (
@@ -19,29 +19,33 @@ export const QuickLinksSection = () => {
           href="https://moviemakerstudio.lovable.app/?via=aiwebtools" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
+          className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
         >
-          AI Movie Production Studio
+          <Video className="h-4 w-4" />
+          <span>AI Movie Production Studio</span>
         </a>
         <a 
           href="https://stagemasterai.lovable.app/?via=aiwebtools" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
+          className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
         >
-          Stage Master AI Suite
+          <Theater className="h-4 w-4" />
+          <span>Stage Master AI Suite for the Performing Arts</span>
         </a>
         <a 
           href="#faq" 
-          className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
+          className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
         >
-          FAQ
+          <HelpCircle className="h-4 w-4" />
+          <span>FAQ</span>
         </a>
         <a 
           href="#disclaimer" 
-          className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
+          className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
         >
-          Disclaimer
+          <AlertTriangle className="h-4 w-4" />
+          <span>Disclaimer</span>
         </a>
       </div>
     </div>
