@@ -34,7 +34,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
 
   return (
     <Drawer open={isMenuOpen} onOpenChange={onClose}>
-      <DrawerContent className="bg-cyber-darker border-t border-neon-purple/30 max-h-[90vh] px-4 rounded-t-xl">
+      <DrawerContent className="bg-cyber-darker border-t border-neon-purple/30 max-h-[90vh] px-4 rounded-t-xl w-full">
         <div className="w-full flex justify-center">
           <div className="w-12 h-1.5 bg-gray-600/50 rounded-full mt-2"></div>
         </div>
@@ -44,7 +44,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
             <Button 
               size="icon" 
               variant="ghost" 
-              className="absolute right-0 top-0 text-neon-purple hover:bg-neon-purple/20 transition-all"
+              className="absolute left-0 top-0 text-neon-purple hover:bg-neon-purple/20 transition-all"
             >
               <X className="h-6 w-6" />
               <span className="sr-only">Close</span>
