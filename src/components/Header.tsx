@@ -23,13 +23,38 @@ const Header = () => {
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
+      // Prevent pinch-zoom when menu is open
+      document.documentElement.style.touchAction = 'none';
     } else {
       document.body.style.overflow = '';
+      document.documentElement.style.touchAction = '';
     }
     return () => {
       document.body.style.overflow = '';
+      document.documentElement.style.touchAction = '';
     };
   }, [isMenuOpen]);
+  
+  // Add meta viewport tag to ensure proper scaling
+  useEffect(() => {
+    // Check if the meta viewport tag exists
+    let viewportMeta = document.querySelector('meta[name="viewport"]');
+    
+    // If it doesn't exist, create it
+    if (!viewportMeta) {
+      viewportMeta = document.createElement('meta');
+      viewportMeta.setAttribute('name', 'viewport');
+      document.head.appendChild(viewportMeta);
+    }
+    
+    // Set the content with user-scalable=no to prevent zooming
+    viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+    
+    // Cleanup function to restore default viewport settings
+    return () => {
+      viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0');
+    };
+  }, []);
 
   return (
     <header className="fixed top-0 z-40 w-full bg-black/80">
@@ -45,7 +70,7 @@ const Header = () => {
                 className="border-neon-purple bg-transparent hover:bg-transparent p-2 rounded-md"
                 aria-label="Toggle menu"
               >
-                <Menu className="h-8 w-8 text-neon-purple" />
+                <Menu className="h-6 w-6 text-neon-purple" />
               </Button>
             </div>
             

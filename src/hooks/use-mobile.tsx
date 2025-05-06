@@ -30,9 +30,16 @@ export function useIsMobile() {
     
     window.addEventListener('resize', handleResize);
     
+    // Add orientation change listener for mobile devices
+    window.addEventListener('orientationchange', () => {
+      // Short delay to allow orientation change to complete
+      setTimeout(checkMobile, 200);
+    });
+    
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', checkMobile);
       clearTimeout(resizeTimer);
     };
   }, []);
