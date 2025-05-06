@@ -1,5 +1,5 @@
 
-import { Music4, Video, Layers, HelpCircle, AlertTriangle, Theater } from "lucide-react";
+import { Music4, Video, Layers, HelpCircle, AlertTriangle, Theater, Store } from "lucide-react";
 
 export const QuickLinksSection = () => {
   return (
@@ -14,6 +14,15 @@ export const QuickLinksSection = () => {
         >
           <Music4 className="h-4 w-4" />
           <span>Music Video Maker GPT</span>
+        </a>
+        <a 
+          href="https://chatgpt.com/g/g-681a201fe69c8191b99e1636be90139e-commercial-scene-maker-gpt" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
+        >
+          <Store className="h-4 w-4" />
+          <span>Commercial Scene Maker GPT</span>
         </a>
         <a 
           href="https://moviemakerstudio.lovable.app/?via=aiwebtools" 
