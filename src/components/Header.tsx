@@ -56,7 +56,7 @@ const Header = () => {
               onClick={toggleMenu} 
               variant="outline" 
               size="icon" 
-              className="border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300 z-50"
+              className="border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300"
               aria-label="Toggle menu"
             >
               <Menu className="h-5 w-5 text-neon-purple" />
