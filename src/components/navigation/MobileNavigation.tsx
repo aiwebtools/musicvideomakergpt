@@ -34,17 +34,17 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
 
   return (
     <Drawer open={isMenuOpen} onOpenChange={onClose}>
-      <DrawerContent className="bg-cyber-darker border-t border-neon-purple/30 max-h-[90vh] rounded-t-xl w-full">
+      <DrawerContent className="bg-cyber-darker border-t border-neon-purple/30 max-h-[90vh] rounded-t-xl">
         <div className="w-full flex justify-center">
           <div className="w-12 h-1.5 bg-gray-600/50 rounded-full mt-2"></div>
         </div>
-        <DrawerHeader className="px-2 relative">
+        <DrawerHeader className="px-4 relative">
           <DrawerTitle className="text-center text-neon-purple text-xl">Menu</DrawerTitle>
           <DrawerClose asChild>
             <Button 
               size="icon" 
               variant="ghost" 
-              className="absolute left-0 top-0 text-neon-purple hover:bg-neon-purple/20 transition-all"
+              className="absolute left-2 top-0 text-neon-purple hover:bg-neon-purple/20 transition-all"
             >
               <X className="h-6 w-6" />
               <span className="sr-only">Close</span>
@@ -52,13 +52,13 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
           </DrawerClose>
         </DrawerHeader>
         
-        <div className="overflow-y-auto pb-10 px-2">
-          <div className="flex flex-col space-y-4 max-w-[95%] mx-auto">
+        <div className="overflow-y-auto pb-10 px-4">
+          <div className="flex flex-col space-y-4 mx-auto">
             <a 
               href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-gradient-to-r from-amber-500 to-amber-700 text-amber-900 font-bold py-4 px-4 rounded-md shadow-lg flex items-center justify-center gap-2"
+              className="bg-gradient-to-r from-amber-500 to-amber-700 text-amber-900 font-bold py-4 px-4 rounded-md shadow-lg flex items-center justify-center gap-2 w-full"
               onClick={onClose}
             >
               <Music4 className="h-5 w-5" />
@@ -67,7 +67,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
 
             {/* Mobile Animate Your Scenes */}
             <div className="pt-2">
-              <p className="font-medium mb-3 pl-2 text-neon-purple text-xl text-center">Animate Your Scenes:</p>
+              <p className="font-medium mb-3 text-neon-purple text-xl text-center">Animate Your Scenes:</p>
               <div className="space-y-3">
                 <Collapsible open={openSection === 'video'} className="mb-3 w-full">
                   <CollapsibleTrigger 
@@ -161,7 +161,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-white bg-neon-purple/20 hover:bg-neon-purple/30 transition-colors py-4 text-center font-medium rounded-md border border-neon-purple/50 mt-4"
+              className="text-white bg-neon-purple/20 hover:bg-neon-purple/30 transition-colors py-4 text-center font-medium rounded-md border border-neon-purple/50 mt-4 w-full"
               onClick={onClose}
             >
               More AI Tools
