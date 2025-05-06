@@ -5,13 +5,19 @@ import { Menu, X } from "lucide-react";
 import Logo from './navigation/Logo';
 import DesktopNavigation from './navigation/DesktopNavigation';
 import MobileNavigation from './navigation/MobileNavigation';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isMobile = useIsMobile();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   // Add scroll effect to header
@@ -53,7 +59,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <MobileNavigation isMenuOpen={isMenuOpen} />
+        <MobileNavigation isMenuOpen={isMenuOpen} onClose={closeMenu} />
       </div>
     </header>
   );
