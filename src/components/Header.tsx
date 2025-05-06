@@ -57,7 +57,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 z-40 w-full bg-black/80">
+    <header className="fixed top-0 z-50 w-full bg-black/80 shadow-md backdrop-blur-sm">
       <div className="container mx-auto px-4 py-3">
         {isMobile ? (
           // Mobile Header Layout
