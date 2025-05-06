@@ -1,13 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown, X, Music4 } from "lucide-react";
+import { ChevronDown, Music4 } from "lucide-react";
 import {
   Drawer,
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
-  DrawerClose,
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 
@@ -34,31 +33,21 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
 
   return (
     <Drawer open={isMenuOpen} onOpenChange={onClose}>
-      <DrawerContent className="bg-cyber-darker border-t border-neon-purple/30 rounded-t-xl px-0 overflow-hidden">
+      <DrawerContent className="bg-cyber-darker border-t border-neon-purple/30 rounded-t-xl px-0">
         <div className="w-full flex justify-center">
           <div className="w-12 h-1.5 bg-gray-600/50 rounded-full mt-2"></div>
         </div>
-        <DrawerHeader className="px-4 relative">
+        <DrawerHeader className="flex items-center justify-center">
           <DrawerTitle className="text-center text-neon-purple text-xl">Menu</DrawerTitle>
-          <DrawerClose asChild>
-            <Button 
-              size="icon" 
-              variant="ghost" 
-              className="absolute left-2 top-0 text-neon-purple hover:bg-neon-purple/20 transition-all"
-            >
-              <X className="h-6 w-6" />
-              <span className="sr-only">Close</span>
-            </Button>
-          </DrawerClose>
         </DrawerHeader>
         
-        <div className="overflow-y-auto pb-10 px-4">
-          <div className="flex flex-col space-y-4 max-w-full">
+        <div className="overflow-y-auto px-4 pb-10 max-h-[70vh]">
+          <div className="flex flex-col space-y-4">
             <a 
               href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-gradient-to-r from-amber-500 to-amber-700 text-amber-900 font-bold py-4 px-4 rounded-md shadow-lg flex items-center justify-center gap-2 w-full"
+              className="bg-gradient-to-r from-amber-500 to-amber-700 text-amber-900 font-bold py-4 px-4 rounded-md shadow-lg flex items-center justify-center gap-2"
               onClick={onClose}
             >
               <Music4 className="h-5 w-5" />
@@ -66,10 +55,10 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
             </a>
 
             {/* Mobile Animate Your Scenes */}
-            <div className="pt-2 w-full">
+            <div className="pt-2">
               <p className="font-medium mb-3 text-neon-purple text-xl text-center">Animate Your Scenes:</p>
-              <div className="space-y-3 w-full">
-                <Collapsible open={openSection === 'video'} className="mb-3">
+              <div className="space-y-3">
+                <Collapsible open={openSection === 'video'} className="mb-3 w-full">
                   <CollapsibleTrigger 
                     className="flex w-full items-center justify-between py-3 px-3 text-base font-medium bg-black/50 rounded-md border border-neon-purple/30 hover:bg-neon-purple/20 transition-all duration-300"
                     onClick={() => toggleSection('video')}
@@ -88,7 +77,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
                   </CollapsibleContent>
                 </Collapsible>
                 
-                <Collapsible open={openSection === 'music'} className="mb-3">
+                <Collapsible open={openSection === 'music'} className="mb-3 w-full">
                   <CollapsibleTrigger 
                     className="flex w-full items-center justify-between py-3 px-3 text-base font-medium bg-black/50 rounded-md border border-neon-purple/30 hover:bg-neon-purple/20 transition-all duration-300"
                     onClick={() => toggleSection('music')}
@@ -103,7 +92,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
                   </CollapsibleContent>
                 </Collapsible>
                 
-                <Collapsible open={openSection === 'lipsync'} className="mb-3">
+                <Collapsible open={openSection === 'lipsync'} className="mb-3 w-full">
                   <CollapsibleTrigger 
                     className="flex w-full items-center justify-between py-3 px-3 text-base font-medium bg-black/50 rounded-md border border-neon-purple/30 hover:bg-neon-purple/20 transition-all duration-300"
                     onClick={() => toggleSection('lipsync')}
@@ -116,7 +105,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
                   </CollapsibleContent>
                 </Collapsible>
                 
-                <Collapsible open={openSection === 'editing'} className="mb-3">
+                <Collapsible open={openSection === 'editing'} className="mb-3 w-full">
                   <CollapsibleTrigger 
                     className="flex w-full items-center justify-between py-3 px-3 text-base font-medium bg-black/50 rounded-md border border-neon-purple/30 hover:bg-neon-purple/20 transition-all duration-300"
                     onClick={() => toggleSection('editing')}

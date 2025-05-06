@@ -1,41 +1,42 @@
 
-import * as React from "react"
+import { useState, useEffect } from "react";
 
-const MOBILE_BREAKPOINT = 768 // This is the standard md breakpoint in Tailwind
+// Use a smaller breakpoint to ensure proper mobile detection on all devices
+const MOBILE_BREAKPOINT = 640; // Equivalent to sm in Tailwind
 
 export function useIsMobile() {
   // Default to true for mobile-first rendering
-  const [isMobile, setIsMobile] = React.useState<boolean>(true)
-  const [mounted, setMounted] = React.useState(false)
+  const [isMobile, setIsMobile] = useState<boolean>(true);
+  const [mounted, setMounted] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Mark as mounted to handle SSR/hydration
-    setMounted(true)
+    setMounted(true);
 
     // Set actual value based on window width
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
-    }
+      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    };
     
     // Initial check
-    checkMobile()
+    checkMobile();
     
     // Add event listener for resize events with debounce
     let resizeTimer: NodeJS.Timeout;
     const handleResize = () => {
-      clearTimeout(resizeTimer)
-      resizeTimer = setTimeout(checkMobile, 100)
-    }
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(checkMobile, 100);
+    };
     
-    window.addEventListener('resize', handleResize)
+    window.addEventListener('resize', handleResize);
     
     // Cleanup
     return () => {
-      window.removeEventListener('resize', handleResize)
-      clearTimeout(resizeTimer)
-    }
-  }, [])
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(resizeTimer);
+    };
+  }, []);
 
   // During SSR or before hydration, assume mobile first
-  return mounted ? isMobile : true
+  return mounted ? isMobile : true;
 }
