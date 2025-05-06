@@ -35,27 +35,32 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 z-50 w-full glass border-b border-neon-purple/30 transition-all duration-300 ${isScrolled ? 'bg-black/70 backdrop-blur-lg shadow-lg' : 'bg-black/40'}`}>
+    <header className={`fixed top-0 z-40 w-full glass border-b border-neon-purple/30 transition-all duration-300 ${isScrolled ? 'bg-black/70 backdrop-blur-lg shadow-lg' : 'bg-black/40'}`}>
       <div className="container mx-auto py-4">
         <div className="flex items-center justify-between">
-          <Logo />
+          {/* Mobile menu button - moved to left side */}
+          <div className="md:hidden">
+            <Button 
+              onClick={toggleMenu} 
+              variant="outline" 
+              size="icon" 
+              className="border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300"
+            >
+              {isMenuOpen ? (
+                <X className="animate-fade-in" />
+              ) : (
+                <Menu className="animate-fade-in" />
+              )}
+            </Button>
+          </div>
+          
+          {/* Logo - centered on mobile */}
+          <div className="flex-1 md:flex-none flex justify-center md:justify-start">
+            <Logo />
+          </div>
           
           {/* Desktop Navigation */}
           <DesktopNavigation />
-
-          {/* Mobile menu button */}
-          <Button 
-            onClick={toggleMenu} 
-            variant="outline" 
-            size="icon" 
-            className="md:hidden border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300"
-          >
-            {isMenuOpen ? (
-              <X className="animate-fade-in" />
-            ) : (
-              <Menu className="animate-fade-in" />
-            )}
-          </Button>
         </div>
 
         {/* Mobile Navigation */}

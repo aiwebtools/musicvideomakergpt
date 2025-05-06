@@ -19,8 +19,16 @@ const ScrollToTop = () => {
       // Check if the element exists
       const element = document.getElementById(hash.substring(1));
       if (element) {
+        // Add a top offset to account for the fixed header
+        const headerOffset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
         setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth" });
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
         }, 100);
       } else if (pathname === "/") {
         // If we're on homepage and the element doesn't exist, navigate to the section on Index page
