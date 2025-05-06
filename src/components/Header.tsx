@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
@@ -84,17 +85,13 @@ const Header = () => {
         ) : (
           // Desktop Header Layout
           <div className="flex items-center justify-between">
-            <div className="w-10">
-              {/* Empty space for balance */}
-            </div>
-            
-            {/* Center: Logo always centered */}
-            <div className="flex-1 flex justify-center">
+            {/* Left: Logo */}
+            <div className="flex-shrink-0">
               <Logo />
             </div>
             
             {/* Right: Desktop Navigation */}
-            <div className="w-10 flex justify-end">
+            <div className="flex justify-end">
               <DesktopNavigation />
             </div>
           </div>
