@@ -4,7 +4,7 @@ import * as React from "react"
 const MOBILE_BREAKPOINT = 768 // This is the standard md breakpoint in Tailwind
 
 export function useIsMobile() {
-  // Default to true for mobile-first rendering and to avoid layout shift on hydration
+  // Default to true for mobile-first rendering
   const [isMobile, setIsMobile] = React.useState<boolean>(true)
   const [mounted, setMounted] = React.useState(false)
 

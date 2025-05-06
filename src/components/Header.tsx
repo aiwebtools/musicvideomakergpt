@@ -63,8 +63,8 @@ const Header = () => {
             </Button>
           )}
           
-          {/* Logo - absolutely centered on mobile */}
-          <div className={`${isMobile ? 'absolute left-1/2 -translate-x-1/2 w-full flex justify-center' : ''}`}>
+          {/* Logo - centered properly on mobile */}
+          <div className={isMobile ? "flex-1 flex justify-center" : ""}>
             <Logo />
           </div>
           

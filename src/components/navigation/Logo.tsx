@@ -21,7 +21,7 @@ const Logo = () => {
           <span className={`${isMobile ? 'text-base' : 'text-lg md:text-xl'} font-bold font-audiowide tracking-tight golden-text`}>
             Music Video Maker
           </span>
-          <span className={`${isMobile ? 'text-sm' : 'text-sm md:text-base'} font-bold font-audiowide tracking-tight golden-text -mt-1`}>
+          <span className={`${isMobile ? 'text-xs' : 'text-sm md:text-base'} font-bold font-audiowide tracking-tight golden-text -mt-1`}>
             Studio
           </span>
         </div>
