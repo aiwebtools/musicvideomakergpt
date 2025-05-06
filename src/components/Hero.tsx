@@ -21,7 +21,7 @@ const Hero = () => {
   }, []);
   
   return (
-    <section className="relative overflow-hidden pt-16 pb-20">
+    <section className="relative overflow-hidden pt-28 pb-20">
       {/* Background elements - removed static grid in favor of CyberGrid component */}
       <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark/90 to-cyber-darker -z-10"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-tertiary/20 rounded-full blur-[100px] -z-10"></div>
@@ -29,17 +29,17 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="inline-block p-1 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue rounded-lg mb-4">
-              <div className="px-3 py-1 bg-cyber-darker/80 rounded text-sm font-medium text-white">
-                Full-Blown Music Video & Music Production Creative Suite
-              </div>
-            </div>
-            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
                 Music Video Maker Studio
               </span>
             </h1>
+            
+            <div className="inline-block p-1 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue rounded-lg mb-4">
+              <div className="px-3 py-1 bg-cyber-darker/80 rounded text-sm font-medium text-white">
+                Full-Blown Music Video & Music Production Creative Suite
+              </div>
+            </div>
             
             <p className="text-lg text-gray-300 max-w-xl">
               Transform yourself into the star of cinematic-quality music videos with our cutting-edge AI director. 
