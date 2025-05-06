@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
@@ -61,9 +60,9 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3">
         {isMobile ? (
           // Mobile Header Layout
-          <div className="relative flex justify-center items-center">
+          <div className="relative flex justify-between items-center">
             {/* Left: Menu button */}
-            <div className="absolute left-0">
+            <div>
               <Button 
                 onClick={toggleMenu} 
                 variant="ghost" 
@@ -74,10 +73,13 @@ const Header = () => {
               </Button>
             </div>
             
-            {/* Center: Logo */}
+            {/* Right: Logo */}
             <div>
               <Logo />
             </div>
+            
+            {/* Empty div for spacing balance */}
+            <div className="w-10"></div>
           </div>
         ) : (
           // Desktop Header Layout
