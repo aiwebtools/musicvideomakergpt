@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown, X } from "lucide-react";
 import {
@@ -18,10 +18,19 @@ interface MobileNavigationProps {
 
 const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
   const [openSection, setOpenSection] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  // Handle mounting to prevent hydration issues
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleSection = (section: string) => {
     setOpenSection(openSection === section ? null : section);
   };
+
+  // Don't render anything on the server
+  if (!mounted) return null;
 
   return (
     <Drawer open={isMenuOpen} onOpenChange={onClose}>
@@ -40,7 +49,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
           </DrawerClose>
         </DrawerHeader>
         
-        <div className="overflow-y-auto pb-8 px-2">
+        <div className="overflow-y-auto pb-8 px-2 -mt-2">
           <div className="flex flex-col space-y-3">
             <a 
               href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
