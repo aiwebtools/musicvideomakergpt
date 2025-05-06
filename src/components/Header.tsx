@@ -73,12 +73,12 @@ const Header = () => {
               </Button>
             </div>
             
-            {/* Right: Logo */}
-            <div>
+            {/* Center: Logo with more space */}
+            <div className="flex-1 flex justify-center">
               <Logo />
             </div>
             
-            {/* Empty div for spacing balance */}
+            {/* Matching empty space on right for balance */}
             <div className="w-10"></div>
           </div>
         ) : (

@@ -13,12 +13,22 @@ const Logo = () => {
           <Music4 className={`h-5 w-5 text-white`} />
         </div>
       </div>
-      <div className="flex flex-col ml-2">
-        <span className="text-sm font-bold golden-text">Music</span>
-        <span className="text-sm font-bold golden-text -mt-1">Video</span>
-        <span className="text-sm font-bold golden-text -mt-1">Maker</span>
-        <span className="text-sm font-bold golden-text -mt-1">Studio</span>
-      </div>
+      {isMobile ? (
+        // Mobile: Single line text
+        <div className="ml-2">
+          <span className="text-sm font-bold golden-text whitespace-nowrap">
+            Music Video Maker Studio
+          </span>
+        </div>
+      ) : (
+        // Desktop: Stacked text
+        <div className="flex flex-col ml-2">
+          <span className="text-sm font-bold golden-text">Music</span>
+          <span className="text-sm font-bold golden-text -mt-1">Video</span>
+          <span className="text-sm font-bold golden-text -mt-1">Maker</span>
+          <span className="text-sm font-bold golden-text -mt-1">Studio</span>
+        </div>
+      )}
     </div>
   );
 };
