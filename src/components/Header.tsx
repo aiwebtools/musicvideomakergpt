@@ -9,7 +9,6 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
 
   const toggleMenu = () => {
@@ -19,20 +18,6 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
-
-  // Add scroll effect to header
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Add body scroll lock when mobile menu is open
   useEffect(() => {
@@ -47,7 +32,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className={`fixed top-0 z-40 w-full transition-all duration-300 ${isScrolled ? 'bg-black/70 backdrop-blur-lg shadow-lg' : 'bg-black/40'}`}>
+    <header className="fixed top-0 z-40 w-full bg-black/80">
       <div className="container mx-auto px-4 py-3">
         {isMobile ? (
           // Mobile Header Layout
