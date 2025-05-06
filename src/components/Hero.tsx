@@ -21,7 +21,7 @@ const Hero = () => {
   }, []);
   
   return (
-    <section className="relative overflow-hidden pt-36 pb-20">
+    <section className="relative overflow-hidden pt-40 pb-20">
       {/* Background elements - removed static grid in favor of CyberGrid component */}
       <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark/90 to-cyber-darker -z-10"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-tertiary/20 rounded-full blur-[100px] -z-10"></div>
@@ -60,7 +60,7 @@ const Hero = () => {
               
               <Button
                 variant="outline"
-                className="border-neon-purple text-neon-purple hover:bg-neon-purple/20 rounded-full px-8 py-6 text-lg"
+                className="border-neon-purple text-neon-purple hover:bg-neon-purple/20 hover:border-neon-purple rounded-full px-8 py-6 text-lg"
                 asChild
               >
                 <a href="#how-it-works">

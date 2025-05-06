@@ -14,9 +14,14 @@ const Logo = () => {
             </div>
           </div>
         </div>
-        <a href="#" className="text-lg md:text-xl font-bold font-audiowide tracking-tight golden-text">
-          Music Video Maker
-        </a>
+        <div className="flex flex-col">
+          <a href="#" className="text-lg md:text-xl font-bold font-audiowide tracking-tight golden-text">
+            Music Video Maker
+          </a>
+          <a href="#" className="text-sm md:text-base font-bold font-audiowide tracking-tight golden-text -mt-1">
+            Studio
+          </a>
+        </div>
       </div>
       <a 
         href="https://www.aiwebtools.ai" 

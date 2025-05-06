@@ -55,8 +55,10 @@ const Header = () => {
             <Logo />
           </div>
           
-          {/* Desktop Navigation */}
-          <DesktopNavigation />
+          {/* Desktop Navigation - give more space for the logo */}
+          <div className="hidden md:block">
+            <DesktopNavigation />
+          </div>
         </div>
 
         {/* Mobile Navigation */}
