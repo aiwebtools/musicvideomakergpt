@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 
-// Use a more conservative breakpoint to ensure proper mobile detection
+// Use a conservative breakpoint to ensure proper mobile detection
 const MOBILE_BREAKPOINT = 768; // Equivalent to md in Tailwind
 
 export function useIsMobile() {
@@ -12,7 +12,7 @@ export function useIsMobile() {
   useEffect(() => {
     // Mark as mounted to handle SSR/hydration
     setMounted(true);
-
+    
     // Set actual value based on window width
     const checkMobile = () => {
       setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);

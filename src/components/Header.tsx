@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import Logo from './navigation/Logo';
 import DesktopNavigation from './navigation/DesktopNavigation';
 import MobileNavigation from './navigation/MobileNavigation';
@@ -47,35 +47,27 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className={`fixed top-0 z-40 w-full glass border-b border-neon-purple/30 transition-all duration-300 ${isScrolled ? 'bg-black/70 backdrop-blur-lg shadow-lg' : 'bg-black/40'}`}>
+    <header className={`fixed top-0 z-40 w-full transition-all duration-300 ${isScrolled ? 'bg-black/70 backdrop-blur-lg shadow-lg' : 'bg-black/40'}`}>
       <div className="container mx-auto px-4 py-3">
         {isMobile ? (
           // Mobile Header Layout
-          <div className="grid grid-cols-3 items-center">
-            {/* Left: Menu toggle button */}
-            <div className="flex items-center justify-start">
+          <div className="relative flex justify-center items-center">
+            {/* Left: Menu button */}
+            <div className="absolute left-0">
               <Button 
                 onClick={toggleMenu} 
-                variant="outline" 
-                size="icon" 
-                className="border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300"
+                variant="ghost" 
+                className="border-neon-purple bg-transparent hover:bg-transparent p-2 rounded-md"
                 aria-label="Toggle menu"
               >
-                {isMenuOpen ? (
-                  <X className="h-5 w-5 text-neon-purple" />
-                ) : (
-                  <Menu className="h-5 w-5 text-neon-purple" />
-                )}
+                <Menu className="h-8 w-8 text-neon-purple" />
               </Button>
             </div>
             
             {/* Center: Logo */}
-            <div className="flex justify-center">
+            <div>
               <Logo />
             </div>
-            
-            {/* Right: Empty space for balance */}
-            <div className="w-10"></div>
           </div>
         ) : (
           // Desktop Header Layout
@@ -98,7 +90,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <MobileNavigation isMenuOpen={isMenuOpen} onClose={closeMenu} />
+      {isMobile && <MobileNavigation isMenuOpen={isMenuOpen} onClose={closeMenu} />}
     </header>
   );
 };
