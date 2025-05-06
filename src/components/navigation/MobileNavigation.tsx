@@ -1,13 +1,15 @@
 
 import React, { useState } from 'react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import {
   Drawer,
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
+  DrawerClose,
 } from "@/components/ui/drawer";
+import { Button } from "@/components/ui/button";
 
 interface MobileNavigationProps {
   isMenuOpen: boolean;
@@ -24,8 +26,18 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
   return (
     <Drawer open={isMenuOpen} onOpenChange={onClose}>
       <DrawerContent className="bg-black/95 border-t border-neon-purple/30 max-h-[85vh] px-4">
-        <DrawerHeader className="px-0">
+        <DrawerHeader className="px-0 relative">
           <DrawerTitle className="text-center text-neon-purple">Menu</DrawerTitle>
+          <DrawerClose asChild>
+            <Button 
+              size="icon" 
+              variant="ghost" 
+              className="absolute right-0 top-0 text-neon-purple hover:bg-neon-purple/20 transition-all"
+            >
+              <X className="h-6 w-6" />
+              <span className="sr-only">Close</span>
+            </Button>
+          </DrawerClose>
         </DrawerHeader>
         
         <div className="overflow-y-auto pb-8 px-2">

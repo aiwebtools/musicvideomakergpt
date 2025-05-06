@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import Logo from './navigation/Logo';
 import DesktopNavigation from './navigation/DesktopNavigation';
 import MobileNavigation from './navigation/MobileNavigation';
@@ -46,11 +46,7 @@ const Header = () => {
               size="icon" 
               className="border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300"
             >
-              {isMenuOpen ? (
-                <X className="animate-fade-in" />
-              ) : (
-                <Menu className="animate-fade-in" />
-              )}
+              <Menu className="animate-fade-in" />
             </Button>
           </div>
           
