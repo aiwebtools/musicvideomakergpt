@@ -50,33 +50,30 @@ const Header = () => {
     <header className={`fixed top-0 z-40 w-full glass border-b border-neon-purple/30 transition-all duration-300 ${isScrolled ? 'bg-black/70 backdrop-blur-lg shadow-lg' : 'bg-black/40'}`}>
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Mobile menu button - always on the left */}
-          {isMobile && (
-            <Button 
-              onClick={toggleMenu} 
-              variant="outline" 
-              size="icon" 
-              className="border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300 z-20"
-              aria-label="Toggle menu"
-            >
-              <Menu className="h-5 w-5 text-neon-purple" />
-            </Button>
-          )}
+          {/* Left side: Mobile menu button or empty space */}
+          <div className="w-10">
+            {isMobile && (
+              <Button 
+                onClick={toggleMenu} 
+                variant="outline" 
+                size="icon" 
+                className="border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300"
+                aria-label="Toggle menu"
+              >
+                <Menu className="h-5 w-5 text-neon-purple" />
+              </Button>
+            )}
+          </div>
           
-          {/* Logo - centered properly on mobile */}
-          <div className={isMobile ? "flex-1 flex justify-center" : ""}>
+          {/* Center: Logo always centered */}
+          <div className="flex-1 flex justify-center">
             <Logo />
           </div>
           
-          {/* Desktop Navigation */}
-          {!isMobile && (
-            <div className="flex-1 flex justify-end">
-              <DesktopNavigation />
-            </div>
-          )}
-          
-          {/* Empty div to balance the flex layout on mobile */}
-          {isMobile && <div className="w-10 h-10"></div>}
+          {/* Right side: Desktop Navigation or empty space */}
+          <div className="w-10 flex justify-end">
+            {!isMobile && <DesktopNavigation />}
+          </div>
         </div>
       </div>
 

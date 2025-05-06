@@ -34,7 +34,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
 
   return (
     <Drawer open={isMenuOpen} onOpenChange={onClose}>
-      <DrawerContent className="bg-cyber-darker border-t border-neon-purple/30 max-h-[90vh] rounded-t-xl px-0">
+      <DrawerContent className="bg-cyber-darker border-t border-neon-purple/30 rounded-t-xl px-0 overflow-hidden">
         <div className="w-full flex justify-center">
           <div className="w-12 h-1.5 bg-gray-600/50 rounded-full mt-2"></div>
         </div>
@@ -52,8 +52,8 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
           </DrawerClose>
         </DrawerHeader>
         
-        <div className="overflow-y-auto pb-10 px-4 w-full">
-          <div className="flex flex-col space-y-4 w-full max-w-full">
+        <div className="overflow-y-auto pb-10 px-4">
+          <div className="flex flex-col space-y-4 max-w-full">
             <a 
               href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
               target="_blank" 
@@ -69,7 +69,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
             <div className="pt-2 w-full">
               <p className="font-medium mb-3 text-neon-purple text-xl text-center">Animate Your Scenes:</p>
               <div className="space-y-3 w-full">
-                <Collapsible open={openSection === 'video'} className="mb-3 w-full">
+                <Collapsible open={openSection === 'video'} className="mb-3">
                   <CollapsibleTrigger 
                     className="flex w-full items-center justify-between py-3 px-3 text-base font-medium bg-black/50 rounded-md border border-neon-purple/30 hover:bg-neon-purple/20 transition-all duration-300"
                     onClick={() => toggleSection('video')}
@@ -77,7 +77,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
                     <span>Image to Video Generators</span>
                     <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'video' ? 'rotate-180' : ''}`} />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="space-y-1 pt-2 animate-accordion-down w-full">
+                  <CollapsibleContent className="space-y-1 pt-2 animate-accordion-down">
                     <a href="https://aistudio.google.com/generate-video" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-neon-purple py-2 px-3 rounded-md hover:bg-neon-purple/10 transition-colors" onClick={onClose}>Google VEO</a>
                     <a href="https://www.sora.com" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-neon-purple py-2 px-3 rounded-md hover:bg-neon-purple/10 transition-colors" onClick={onClose}>SORA</a>
                     <a href="https://klingai.com" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-neon-purple py-2 px-3 rounded-md hover:bg-neon-purple/10 transition-colors" onClick={onClose}>KLING</a>
@@ -88,7 +88,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
                   </CollapsibleContent>
                 </Collapsible>
                 
-                <Collapsible open={openSection === 'music'} className="mb-3 w-full">
+                <Collapsible open={openSection === 'music'} className="mb-3">
                   <CollapsibleTrigger 
                     className="flex w-full items-center justify-between py-3 px-3 text-base font-medium bg-black/50 rounded-md border border-neon-purple/30 hover:bg-neon-purple/20 transition-all duration-300"
                     onClick={() => toggleSection('music')}
@@ -96,14 +96,14 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
                     <span>Music & FX Generation</span>
                     <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'music' ? 'rotate-180' : ''}`} />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="space-y-1 pt-2 animate-accordion-down w-full">
+                  <CollapsibleContent className="space-y-1 pt-2 animate-accordion-down">
                     <a href="https://suno.com/invite/@aiwebtools" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-neon-purple py-2 px-3 rounded-md hover:bg-neon-purple/10 transition-colors" onClick={onClose}>SUNO Music Generator</a>
                     <a href="https://www.udio.com" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-neon-purple py-2 px-3 rounded-md hover:bg-neon-purple/10 transition-colors" onClick={onClose}>UDIO Music Generator</a>
                     <a href="https://elevenlabs.io/?from=kennybastian5304" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-neon-purple py-2 px-3 rounded-md hover:bg-neon-purple/10 transition-colors" onClick={onClose}>Eleven Labs Voice & Sound Effect Generator</a>
                   </CollapsibleContent>
                 </Collapsible>
                 
-                <Collapsible open={openSection === 'lipsync'} className="mb-3 w-full">
+                <Collapsible open={openSection === 'lipsync'} className="mb-3">
                   <CollapsibleTrigger 
                     className="flex w-full items-center justify-between py-3 px-3 text-base font-medium bg-black/50 rounded-md border border-neon-purple/30 hover:bg-neon-purple/20 transition-all duration-300"
                     onClick={() => toggleSection('lipsync')}
@@ -111,12 +111,12 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
                     <span>Lipsync</span>
                     <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'lipsync' ? 'rotate-180' : ''}`} />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="space-y-1 pt-2 animate-accordion-down w-full">
+                  <CollapsibleContent className="space-y-1 pt-2 animate-accordion-down">
                     <a href="https://www.hedra.com" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-neon-purple py-2 px-3 rounded-md hover:bg-neon-purple/10 transition-colors" onClick={onClose}>HEDRA</a>
                   </CollapsibleContent>
                 </Collapsible>
                 
-                <Collapsible open={openSection === 'editing'} className="mb-3 w-full">
+                <Collapsible open={openSection === 'editing'} className="mb-3">
                   <CollapsibleTrigger 
                     className="flex w-full items-center justify-between py-3 px-3 text-base font-medium bg-black/50 rounded-md border border-neon-purple/30 hover:bg-neon-purple/20 transition-all duration-300"
                     onClick={() => toggleSection('editing')}
@@ -124,7 +124,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
                     <span>Editing Tools</span>
                     <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'editing' ? 'rotate-180' : ''}`} />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="space-y-1 pt-2 animate-accordion-down w-full">
+                  <CollapsibleContent className="space-y-1 pt-2 animate-accordion-down">
                     <a href="https://www.videoleapapp.com/" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-neon-purple py-2 px-3 rounded-md hover:bg-neon-purple/10 transition-colors" onClick={onClose}>VideoLeap</a>
                     <a href="https://www.capcut.com" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-neon-purple py-2 px-3 rounded-md hover:bg-neon-purple/10 transition-colors" onClick={onClose}>CapCut</a>
                     <a href="https://download.wondershare.com/filmora_full846.exe" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-neon-purple py-2 px-3 rounded-md hover:bg-neon-purple/10 transition-colors" onClick={onClose}>Download Filmora</a>
@@ -133,9 +133,9 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
               </div>
             </div>
 
-            <div className="py-2 w-full">
+            <div className="py-2">
               <p className="font-medium mb-3 text-neon-purple text-xl text-center">Other Creative Production AI Tools:</p>
-              <div className="space-y-3 w-full">
+              <div className="space-y-3">
                 <a 
                   href="https://moviemakerstudio.lovable.app/?via=aiwebtools" 
                   target="_blank" 
@@ -161,7 +161,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-white bg-neon-purple/20 hover:bg-neon-purple/30 transition-colors py-4 text-center font-medium rounded-md border border-neon-purple/50 mt-4 w-full"
+              className="text-white bg-neon-purple/20 hover:bg-neon-purple/30 transition-colors py-4 text-center font-medium rounded-md border border-neon-purple/50 mt-4"
               onClick={onClose}
             >
               More AI Tools
