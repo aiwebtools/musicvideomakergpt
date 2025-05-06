@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from "react";
 
-// Use a smaller breakpoint to ensure proper mobile detection on all devices
-const MOBILE_BREAKPOINT = 640; // Equivalent to sm in Tailwind
+// Use a more conservative breakpoint to ensure proper mobile detection
+const MOBILE_BREAKPOINT = 768; // Equivalent to md in Tailwind
 
 export function useIsMobile() {
   // Default to true for mobile-first rendering

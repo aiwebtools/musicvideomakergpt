@@ -50,27 +50,32 @@ const Header = () => {
     <header className={`fixed top-0 z-40 w-full glass border-b border-neon-purple/30 transition-all duration-300 ${isScrolled ? 'bg-black/70 backdrop-blur-lg shadow-lg' : 'bg-black/40'}`}>
       <div className="container mx-auto px-4 py-3">
         {isMobile ? (
-          // Mobile Header Layout - Simple layout with menu on left, logo center
-          <div className="flex items-center justify-between relative">
-            {/* Left: Mobile menu button */}
-            <Button 
-              onClick={toggleMenu} 
-              variant="outline" 
-              size="icon" 
-              className="absolute left-0 border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <X className="h-5 w-5 text-neon-purple" />
-              ) : (
-                <Menu className="h-5 w-5 text-neon-purple" />
-              )}
-            </Button>
+          // Mobile Header Layout
+          <div className="grid grid-cols-3 items-center">
+            {/* Left: Menu toggle button */}
+            <div className="flex items-center justify-start">
+              <Button 
+                onClick={toggleMenu} 
+                variant="outline" 
+                size="icon" 
+                className="border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300"
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? (
+                  <X className="h-5 w-5 text-neon-purple" />
+                ) : (
+                  <Menu className="h-5 w-5 text-neon-purple" />
+                )}
+              </Button>
+            </div>
             
             {/* Center: Logo */}
-            <div className="flex-1 flex justify-center">
+            <div className="flex justify-center">
               <Logo />
             </div>
+            
+            {/* Right: Empty space for balance */}
+            <div className="w-10"></div>
           </div>
         ) : (
           // Desktop Header Layout
