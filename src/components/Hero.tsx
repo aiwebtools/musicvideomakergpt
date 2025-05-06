@@ -2,9 +2,11 @@
 import { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Music4 } from "lucide-react";
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Hero = () => {
   const videoRef = useRef<HTMLIFrameElement>(null);
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     // Force video to play after component mounts
@@ -21,33 +23,33 @@ const Hero = () => {
   }, []);
   
   return (
-    <section className="relative overflow-hidden pt-40 pb-20">
+    <section className="relative overflow-hidden pt-28 md:pt-40 pb-16 md:pb-20">
       {/* Background elements - removed static grid in favor of CyberGrid component */}
       <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark/90 to-cyber-darker -z-10"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-tertiary/20 rounded-full blur-[100px] -z-10"></div>
       
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-4 md:space-y-6 text-center lg:text-left">
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight ${isMobile ? 'text-center' : ''}`}>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
                 Music Video Maker Studio
               </span>
             </h1>
             
-            <div className="inline-block p-1 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue rounded-lg mb-4 mt-2">
+            <div className={`inline-block p-1 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue rounded-lg mb-2 mt-2 ${isMobile ? 'mx-auto' : ''}`}>
               <div className="px-3 py-1 bg-cyber-darker/80 rounded text-sm font-medium text-white">
                 Full-Blown Music Video & Music Production Creative Suite
               </div>
             </div>
             
-            <p className="text-lg text-gray-300 max-w-xl">
+            <p className={`text-lg text-gray-300 max-w-xl ${isMobile ? 'mx-auto text-center' : ''}`}>
               Transform yourself into the star of cinematic-quality music videos with our cutting-edge AI director. 
               Build scene-by-scene visuals where <span className="text-neon-purple">you and even your band</span> are featured in vivid, 
               realistic scenes tied to your music.
             </p>
             
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className={`flex flex-wrap gap-4 pt-2 ${isMobile ? 'justify-center' : ''}`}>
               <a 
                 href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
                 target="_blank" 
@@ -60,7 +62,7 @@ const Hero = () => {
               
               <Button
                 variant="outline"
-                className="border-neon-purple text-neon-purple hover:bg-neon-purple/20 hover:border-neon-purple rounded-full px-8 py-6 text-lg"
+                className="border-neon-purple text-neon-purple hover:bg-neon-purple/20 hover:border-neon-purple rounded-full px-6 py-5 text-base"
                 asChild
               >
                 <a href="#how-it-works">
@@ -69,12 +71,12 @@ const Hero = () => {
               </Button>
             </div>
             
-            <div className="text-sm text-gray-400 pt-2">
+            <div className={`text-sm text-gray-400 pt-1 ${isMobile ? 'text-center' : ''}`}>
               <p>Powered by GPT-4o for high-fidelity image generation</p>
             </div>
           </div>
           
-          <div className="relative">
+          <div className="relative mt-6 md:mt-0">
             <div className="aspect-video rounded-lg overflow-hidden border-2 border-neon-purple neon-glow">
               <iframe
                 ref={videoRef}
@@ -90,8 +92,12 @@ const Hero = () => {
             </div>
             
             {/* Decorative elements */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 border border-neon-blue rounded-full animate-pulse-soft opacity-25"></div>
-            <div className="absolute -bottom-8 -left-8 w-32 h-32 border border-neon-pink rounded-full animate-pulse-soft opacity-25"></div>
+            {!isMobile && (
+              <>
+                <div className="absolute -top-6 -right-6 w-24 h-24 border border-neon-blue rounded-full animate-pulse-soft opacity-25"></div>
+                <div className="absolute -bottom-8 -left-8 w-32 h-32 border border-neon-pink rounded-full animate-pulse-soft opacity-25"></div>
+              </>
+            )}
           </div>
         </div>
       </div>

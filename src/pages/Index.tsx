@@ -14,10 +14,12 @@ import Disclaimer from '@/components/Disclaimer';
 import CTA from '@/components/CTA';
 import CyberGrid from '@/components/CyberGrid';
 import { useToast } from "@/hooks/use-toast";
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
   const [showConsent, setShowConsent] = useState(false);
   const { toast } = useToast();
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     // Check if user has already accepted the terms
@@ -68,10 +70,10 @@ const Index = () => {
         <CTA />
         
         {/* Ideogram Image Section */}
-        <section className="py-16 px-4 overflow-hidden relative">
+        <section className="py-12 md:py-16 px-4 overflow-hidden relative">
           <div className="container mx-auto">
             <div className="flex flex-col items-center justify-center">
-              <div className="max-w-4xl w-full">
+              <div className={`${isMobile ? 'w-full' : 'max-w-4xl w-full'}`}>
                 <div className="relative rounded-2xl overflow-hidden border-4 border-neon-purple/30 shadow-2xl shadow-neon-purple/30">
                   <img 
                     src="https://ideogram.ai/assets/image/lossless/response/TiaFDh0wRKaB-TpDEpoF0Q" 

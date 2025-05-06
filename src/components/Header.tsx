@@ -48,34 +48,40 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 z-40 w-full glass border-b border-neon-purple/30 transition-all duration-300 ${isScrolled ? 'bg-black/70 backdrop-blur-lg shadow-lg' : 'bg-black/40'}`}>
-      <div className="container mx-auto py-4">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Mobile menu button - moved to left side */}
-          <div className="md:hidden">
+          {/* Mobile menu button */}
+          {isMobile && (
             <Button 
               onClick={toggleMenu} 
               variant="outline" 
               size="icon" 
-              className="border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300"
+              className="border-neon-purple bg-black/40 hover:bg-neon-purple/20 transition-all duration-300 z-50"
+              aria-label="Toggle menu"
             >
-              <Menu className="animate-fade-in" />
+              <Menu className="h-5 w-5 text-neon-purple" />
             </Button>
-          </div>
+          )}
           
-          {/* Logo - centered on mobile */}
-          <div className="flex-1 md:flex-none flex justify-center md:justify-start">
+          {/* Logo - centered on mobile, left-aligned on desktop */}
+          <div className={`${isMobile ? 'absolute left-1/2 -translate-x-1/2' : ''} flex items-center`}>
             <Logo />
           </div>
           
-          {/* Desktop Navigation - give more space for the logo */}
-          <div className="hidden md:block">
-            <DesktopNavigation />
-          </div>
+          {/* Desktop Navigation */}
+          {!isMobile && (
+            <div className="flex-1 flex justify-end">
+              <DesktopNavigation />
+            </div>
+          )}
+          
+          {/* Empty div to balance the flex layout on mobile */}
+          {isMobile && <div className="w-10 h-10"></div>}
         </div>
-
-        {/* Mobile Navigation */}
-        <MobileNavigation isMenuOpen={isMenuOpen} onClose={closeMenu} />
       </div>
+
+      {/* Mobile Navigation */}
+      <MobileNavigation isMenuOpen={isMenuOpen} onClose={closeMenu} />
     </header>
   );
 };
