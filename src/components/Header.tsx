@@ -35,7 +35,7 @@ const Header = () => {
     };
   }, [isMenuOpen]);
   
-  // Add meta viewport tag to ensure proper scaling
+  // Add meta viewport tag to ensure proper mobile display
   useEffect(() => {
     // Check if the meta viewport tag exists
     let viewportMeta = document.querySelector('meta[name="viewport"]');
@@ -57,7 +57,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-black/80 shadow-md backdrop-blur-sm">
+    <header className="fixed top-0 z-[100] w-full bg-black/80 shadow-md backdrop-blur-sm">
       <div className="container mx-auto px-4 py-3">
         {isMobile ? (
           // Mobile Header Layout
