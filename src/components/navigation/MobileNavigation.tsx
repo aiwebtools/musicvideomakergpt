@@ -31,18 +31,22 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
 
   return (
     <div 
-      className={`fixed inset-0 bg-black z-[9999] transition-opacity duration-300 ${
+      className={`fixed inset-0 bg-black z-[9999] transition-transform duration-300 ${
         isMenuOpen 
-          ? 'opacity-100 pointer-events-auto' 
-          : 'opacity-0 pointer-events-none'
+          ? 'translate-x-0' 
+          : 'translate-x-full'
       }`}
+      style={{
+        willChange: 'transform',
+        touchAction: 'pan-y',
+      }}
     >
-      <div className="flex flex-col h-full max-h-screen overflow-y-auto overscroll-contain">
+      <div className="flex flex-col h-full max-h-screen overflow-hidden">
         <div className="flex justify-between items-center p-4 border-b border-neon-purple/30 sticky top-0 bg-black">
           <Button 
             onClick={onClose} 
             variant="ghost" 
-            className="p-3 text-neon-purple hover:bg-transparent touch-manipulation"
+            className="p-3 text-neon-purple hover:bg-transparent"
           >
             <X className="h-6 w-6" />
           </Button>
@@ -70,7 +74,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
             <div className="mb-3">
               <button 
                 onClick={() => toggleSection('video')}
-                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white touch-manipulation"
+                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white"
               >
                 <span>Image to Video Generators</span>
                 <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'video' ? 'rotate-180' : ''}`} />
@@ -92,7 +96,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
             <div className="mb-3">
               <button
                 onClick={() => toggleSection('music')}
-                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white touch-manipulation"
+                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white"
               >
                 <span>Music & FX Generation</span>
                 <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'music' ? 'rotate-180' : ''}`} />
@@ -110,7 +114,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
             <div className="mb-3">
               <button
                 onClick={() => toggleSection('lipsync')}
-                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white touch-manipulation"
+                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white"
               >
                 <span>Lipsync</span>
                 <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'lipsync' ? 'rotate-180' : ''}`} />
@@ -126,7 +130,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
             <div className="mb-3">
               <button
                 onClick={() => toggleSection('editing')}
-                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white touch-manipulation"
+                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white"
               >
                 <span>Editing Tools</span>
                 <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'editing' ? 'rotate-180' : ''}`} />

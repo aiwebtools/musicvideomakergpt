@@ -24,8 +24,8 @@ const Header = () => {
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
-      // Prevent pinch-zoom when menu is open
-      document.documentElement.style.touchAction = 'none';
+      // Use less restrictive touch action
+      document.documentElement.style.touchAction = 'pan-x pan-y';
     } else {
       document.body.style.overflow = '';
       document.documentElement.style.touchAction = '';
@@ -48,8 +48,8 @@ const Header = () => {
       document.head.appendChild(viewportMeta);
     }
     
-    // Set the content with user-scalable=no to prevent zooming
-    viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+    // Set the content that allows zooming for better accessibility
+    viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0');
     
     // Cleanup function to restore default viewport settings
     return () => {
