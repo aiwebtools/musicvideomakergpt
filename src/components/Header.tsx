@@ -12,7 +12,8 @@ const Header = () => {
   const isMobile = useIsMobile();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prevState => !prevState);
+    console.log("Menu toggle clicked, new state:", !isMenuOpen);
   };
 
   const closeMenu = () => {
@@ -57,7 +58,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 z-[100] w-full bg-black/80 shadow-md backdrop-blur-sm">
+    <header className="fixed top-0 z-[999] w-full bg-black/80 shadow-md backdrop-blur-sm">
       <div className="container mx-auto px-4 py-3">
         {isMobile ? (
           // Mobile Header Layout
@@ -98,8 +99,8 @@ const Header = () => {
         )}
       </div>
 
-      {/* Mobile Navigation */}
-      {isMobile && <MobileNavigation isMenuOpen={isMenuOpen} onClose={closeMenu} />}
+      {/* Mobile Navigation - ALWAYS render but hide with CSS */}
+      <MobileNavigation isMenuOpen={isMenuOpen} onClose={closeMenu} />
     </header>
   );
 };
