@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { X, ChevronDown, Music4 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,6 +41,8 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
       style={{
         willChange: 'transform',
         touchAction: 'pan-y',
+        maxWidth: '100%', // Ensure it doesn't overflow viewport width
+        width: '100%',
       }}
     >
       <div className="flex flex-col h-full max-h-screen overflow-hidden">
@@ -55,7 +58,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
           <div className="w-6"></div> {/* Empty div for flex balance */}
         </div>
         
-        <div className="p-4 space-y-4 text-sm pb-40 flex-1 overflow-y-auto">
+        <div className="p-4 space-y-4 text-sm pb-40 flex-1 overflow-y-auto mx-auto w-full max-w-md">
           <a 
             href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
             target="_blank" 
