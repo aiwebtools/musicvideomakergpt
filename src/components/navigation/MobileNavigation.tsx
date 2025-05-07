@@ -58,7 +58,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
         </div>
         
         <div className="p-4 space-y-4 text-sm pb-40 flex-1 overflow-y-auto overflow-x-hidden w-full">
-          <div className="max-w-md mx-auto w-full px-2">
+          <div className="w-full px-4">
             <a 
               href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
               target="_blank" 
