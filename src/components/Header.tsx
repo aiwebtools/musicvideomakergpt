@@ -35,21 +35,22 @@ const Header = () => {
         <div className="container mx-auto px-4 py-3">
           {isMobile ? (
             // Mobile Header Layout
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col space-y-2">
               <Logo />
               
-              <Button 
+              <button 
                 onClick={toggleMobileMenu} 
-                variant="ghost" 
-                className="p-2 text-neon-purple hover:bg-transparent"
+                className="w-full py-2 px-4 rounded-md text-amber-900 font-bold animate-gold-pulse"
+                style={{
+                  background: "linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c)",
+                  boxShadow: "0 0 15px 5px rgba(255, 215, 0, 0.6), 0 0 30px 5px rgba(255, 215, 0, 0.4)",
+                  textShadow: "0 1px 3px rgba(255, 255, 255, 0.3)",
+                  border: "2px solid #ffd700"
+                }}
                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               >
-                {mobileMenuOpen ? (
-                  <X className="h-6 w-6" />
-                ) : (
-                  <Menu className="h-6 w-6" />
-                )}
-              </Button>
+                {mobileMenuOpen ? "Close Menu" : "Menu"}
+              </button>
             </div>
           ) : (
             // Desktop Header Layout
@@ -61,9 +62,19 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Simple Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay */}
       {isMobile && mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-black pt-16 overflow-y-auto">
+        <div className="fixed inset-0 z-40 bg-black pt-20 overflow-y-auto">
+          <div className="flex items-center justify-center pb-2 border-b border-neon-purple/30">
+            <h2 className="text-xl text-neon-purple font-medium">Menu</h2>
+            <Button 
+              onClick={toggleMobileMenu} 
+              variant="ghost" 
+              className="absolute right-4 p-3 text-neon-purple hover:bg-transparent"
+            >
+              <X className="h-6 w-6" />
+            </Button>
+          </div>
           <MobileMenu onClose={() => setMobileMenuOpen(false)} />
         </div>
       )}
