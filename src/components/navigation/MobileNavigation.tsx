@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, ChevronDown, Music4 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { DROPDOWN_SECTIONS } from './dropdowns/animate-scenes/dropdownData';
 
 interface MobileNavigationProps {
   isMenuOpen: boolean;
@@ -70,81 +71,36 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
           <div className="pt-2">
             <p className="font-medium mb-3 text-neon-purple text-lg">Animate Your Scenes:</p>
             
-            {/* Image to Video Generators */}
-            <div className="mb-3">
-              <button 
-                onClick={() => toggleSection('video')}
-                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white"
-              >
-                <span>Image to Video Generators</span>
-                <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'video' ? 'rotate-180' : ''}`} />
-              </button>
-              {openSection === 'video' && (
-                <div className="py-1 space-y-1 animate-fade-in">
-                  <a href="https://aistudio.google.com/generate-video" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>Google VEO</a>
-                  <a href="https://www.sora.com" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>SORA</a>
-                  <a href="https://klingai.com" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>KLING</a>
-                  <a href="https://hailuoai.video" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>HAILUO</a>
-                  <a href="https://higgsfield.ai" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>HIGGSFIELD</a>
-                  <a href="https://runwayml.com" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>RunwayML</a>
-                  <a href="https://pika.art" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>PIKA LABS</a>
-                </div>
-              )}
-            </div>
-            
-            {/* Music & FX Generation */}
-            <div className="mb-3">
-              <button
-                onClick={() => toggleSection('music')}
-                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white"
-              >
-                <span>Music & FX Generation</span>
-                <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'music' ? 'rotate-180' : ''}`} />
-              </button>
-              {openSection === 'music' && (
-                <div className="py-1 space-y-1 animate-fade-in">
-                  <a href="https://suno.com/invite/@aiwebtools" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>SUNO Music Generator</a>
-                  <a href="https://www.udio.com" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>UDIO Music Generator</a>
-                  <a href="https://elevenlabs.io/?from=kennybastian5304" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>Eleven Labs Voice</a>
-                </div>
-              )}
-            </div>
-            
-            {/* Lipsync */}
-            <div className="mb-3">
-              <button
-                onClick={() => toggleSection('lipsync')}
-                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white"
-              >
-                <span>Lipsync</span>
-                <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'lipsync' ? 'rotate-180' : ''}`} />
-              </button>
-              {openSection === 'lipsync' && (
-                <div className="py-1 space-y-1 animate-fade-in">
-                  <a href="https://www.hedra.com" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>HEDRA</a>
-                </div>
-              )}
-            </div>
-            
-            {/* Editing Tools */}
-            <div className="mb-3">
-              <button
-                onClick={() => toggleSection('editing')}
-                className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white"
-              >
-                <span>Editing Tools</span>
-                <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === 'editing' ? 'rotate-180' : ''}`} />
-              </button>
-              {openSection === 'editing' && (
-                <div className="py-1 space-y-1 animate-fade-in">
-                  <a href="https://www.videoleapapp.com/" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>VideoLeap</a>
-                  <a href="https://www.capcut.com" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>CapCut</a>
-                  <a href="https://download.wondershare.com/filmora_full846.exe" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-neon-purple py-2 px-3 text-base" onClick={onClose}>Download Filmora</a>
-                </div>
-              )}
-            </div>
+            {/* Dynamically render all sections from the dropdown data */}
+            {DROPDOWN_SECTIONS.map((section) => (
+              <div className="mb-3" key={section.id}>
+                <button 
+                  onClick={() => toggleSection(section.id)}
+                  className="flex w-full items-center justify-between py-3 px-4 text-base font-medium bg-black rounded-md border border-neon-purple text-white"
+                >
+                  <span>{section.title}</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${openSection === section.id ? 'rotate-180' : ''}`} />
+                </button>
+                {openSection === section.id && (
+                  <div className="py-1 space-y-1 animate-fade-in">
+                    {section.links.map((link, idx) => (
+                      <a 
+                        key={idx}
+                        href={link.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="block text-white hover:text-neon-purple py-2 px-3 text-base" 
+                        onClick={onClose}
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
-
+          
           {/* Other Creative Production AI Tools */}
           <div className="pt-2">
             <p className="font-medium mb-3 text-neon-purple text-lg">Other Creative Production AI Tools:</p>
