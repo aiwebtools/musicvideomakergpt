@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -38,19 +39,21 @@ const Header = () => {
             <div className="flex flex-col space-y-2">
               <Logo />
               
-              <button 
-                onClick={toggleMobileMenu} 
-                className="w-full py-2 px-4 rounded-md text-amber-900 font-bold animate-gold-pulse"
-                style={{
-                  background: "linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c)",
-                  boxShadow: "0 0 15px 5px rgba(255, 215, 0, 0.6), 0 0 30px 5px rgba(255, 215, 0, 0.4)",
-                  textShadow: "0 1px 3px rgba(255, 255, 255, 0.3)",
-                  border: "2px solid #ffd700"
-                }}
-                aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-              >
-                {mobileMenuOpen ? "Close Menu" : "Menu"}
-              </button>
+              <div className="flex justify-center">
+                <button 
+                  onClick={toggleMobileMenu} 
+                  className="py-2 px-4 rounded-md text-amber-900 font-bold animate-gold-pulse max-w-[200px]"
+                  style={{
+                    background: "linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c)",
+                    boxShadow: "0 0 15px 5px rgba(255, 215, 0, 0.6), 0 0 30px 5px rgba(255, 215, 0, 0.4)",
+                    textShadow: "0 1px 3px rgba(255, 255, 255, 0.3)",
+                    border: "2px solid #ffd700"
+                  }}
+                  aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                >
+                  {mobileMenuOpen ? "Close Menu" : "Menu"}
+                </button>
+              </div>
             </div>
           ) : (
             // Desktop Header Layout
