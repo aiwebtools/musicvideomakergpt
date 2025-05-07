@@ -1,107 +1,141 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Logo from './navigation/Logo';
 import DesktopNavigation from './navigation/DesktopNavigation';
-import MobileNavigation from './navigation/MobileNavigation';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
-
-  const toggleMenu = () => {
-    setIsMenuOpen(prevState => !prevState);
-    console.log("Menu toggle clicked, new state:", !isMenuOpen);
+  
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    console.log("Mobile menu toggle clicked, current state:", mobileMenuOpen);
+    setMobileMenuOpen(prev => !prev);
   };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  // Add body scroll lock when mobile menu is open
+  
+  // Handle body scroll lock when mobile menu is open
   useEffect(() => {
-    if (isMenuOpen) {
+    if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
-      // Use less restrictive touch action
-      document.documentElement.style.touchAction = 'pan-x pan-y';
     } else {
       document.body.style.overflow = '';
-      document.documentElement.style.touchAction = '';
     }
+    
     return () => {
       document.body.style.overflow = '';
-      document.documentElement.style.touchAction = '';
     };
-  }, [isMenuOpen]);
+  }, [mobileMenuOpen]);
   
-  // Add meta viewport tag to ensure proper mobile display
-  useEffect(() => {
-    // Check if the meta viewport tag exists
-    let viewportMeta = document.querySelector('meta[name="viewport"]');
-    
-    // If it doesn't exist, create it
-    if (!viewportMeta) {
-      viewportMeta = document.createElement('meta');
-      viewportMeta.setAttribute('name', 'viewport');
-      document.head.appendChild(viewportMeta);
-    }
-    
-    // Set the content that allows zooming for better accessibility
-    viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0');
-    
-    // Cleanup function to restore default viewport settings
-    return () => {
-      viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0');
-    };
-  }, []);
-
   return (
-    <header className="fixed top-0 z-[999] w-full bg-black/80 shadow-md backdrop-blur-sm">
-      <div className="container mx-auto px-4 py-3">
-        {isMobile ? (
-          // Mobile Header Layout
-          <div className="relative flex justify-between items-center">
-            {/* Left: Menu button */}
-            <div>
+    <>
+      <header className="fixed top-0 z-50 w-full bg-black/80 shadow-md backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-3">
+          {isMobile ? (
+            // Mobile Header Layout
+            <div className="flex justify-between items-center">
+              <Logo />
+              
               <Button 
-                onClick={toggleMenu} 
+                onClick={toggleMobileMenu} 
                 variant="ghost" 
-                className="border-neon-purple bg-transparent hover:bg-transparent p-2 rounded-md"
-                aria-label="Toggle menu"
+                className="p-2 text-neon-purple hover:bg-transparent"
+                aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               >
-                <Menu className="h-6 w-6 text-neon-purple" />
+                {mobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </Button>
             </div>
-            
-            {/* Center: Logo with more space */}
-            <div className="flex-1 flex justify-center">
+          ) : (
+            // Desktop Header Layout
+            <div className="flex items-center justify-between">
               <Logo />
-            </div>
-            
-            {/* Matching empty space on right for balance */}
-            <div className="w-10"></div>
-          </div>
-        ) : (
-          // Desktop Header Layout
-          <div className="flex items-center justify-between">
-            {/* Left: Logo */}
-            <div className="flex-shrink-0">
-              <Logo />
-            </div>
-            
-            {/* Right: Desktop Navigation */}
-            <div className="flex justify-end">
               <DesktopNavigation />
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      </header>
 
-      {/* Mobile Navigation - ALWAYS render but hide with CSS */}
-      <MobileNavigation isMenuOpen={isMenuOpen} onClose={closeMenu} />
-    </header>
+      {/* Simple Mobile Menu Overlay */}
+      {isMobile && mobileMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-black pt-16 overflow-y-auto">
+          <MobileMenu onClose={() => setMobileMenuOpen(false)} />
+        </div>
+      )}
+    </>
+  );
+};
+
+// Simple Mobile Menu component
+const MobileMenu = ({ onClose }) => {
+  return (
+    <nav className="px-4 py-6">
+      <div className="space-y-6">
+        {/* Main Navigation Links */}
+        <div className="space-y-3">
+          <a href="/" className="block py-2 px-4 text-lg text-white border border-neon-purple/50 rounded-md">
+            Home
+          </a>
+          <a 
+            href="https://chatgpt.com/g/g-6818b77ba8948191abb42058c0a48770-music-video-maker-gpt" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block py-2 px-4 text-lg text-white border border-neon-purple/50 rounded-md"
+          >
+            Music Video Maker GPT
+          </a>
+          <a 
+            href="https://www.aiwebtools.ai" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block py-2 px-4 text-lg text-white border border-neon-purple/50 rounded-md"
+          >
+            More AI Tools
+          </a>
+        </div>
+
+        {/* Tool Categories */}
+        <div className="pt-4 border-t border-neon-purple/30">
+          <h3 className="text-neon-purple text-lg mb-3">Image to Video Tools</h3>
+          <div className="grid gap-2">
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">Runway Gen-2</a>
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">Pika Labs</a>
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">Stable Video Diffusion</a>
+          </div>
+        </div>
+
+        <div className="pt-4 border-t border-neon-purple/30">
+          <h3 className="text-neon-purple text-lg mb-3">Music & FX Tools</h3>
+          <div className="grid gap-2">
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">Suno</a>
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">Soundraw</a>
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">AudioCraft</a>
+          </div>
+        </div>
+
+        <div className="pt-4 border-t border-neon-purple/30">
+          <h3 className="text-neon-purple text-lg mb-3">Lipsync Tools</h3>
+          <div className="grid gap-2">
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">Wav2Lip</a>
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">Synthesia</a>
+          </div>
+        </div>
+
+        <div className="pt-4 border-t border-neon-purple/30">
+          <h3 className="text-neon-purple text-lg mb-3">Editing Tools</h3>
+          <div className="grid gap-2">
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">Runway</a>
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">Capcut</a>
+            <a href="#" className="block py-2 px-4 bg-black/30 text-white rounded">DaVinci Resolve</a>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

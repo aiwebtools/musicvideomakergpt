@@ -1,28 +1,28 @@
 
 import { useState, useEffect } from "react";
 
-// Use a conservative breakpoint to ensure proper mobile detection
-const MOBILE_BREAKPOINT = 768; // Equivalent to md in Tailwind
+// Use standard Tailwind breakpoint for mobile
+const MOBILE_BREAKPOINT = 768; // md in Tailwind
 
 export function useIsMobile() {
-  // Default to true for mobile-first rendering
-  const [isMobile, setIsMobile] = useState<boolean>(true);
+  // Default to mobile for SSR
+  const [isMobile, setIsMobile] = useState(true);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Mark as mounted to handle SSR/hydration
+    // Mark component as mounted
     setMounted(true);
     
-    // Set actual value based on window width
+    // Function to check viewport width
     const checkMobile = () => {
       setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
     };
     
-    // Initial check
+    // Run initial check
     checkMobile();
     
-    // Add event listener for resize events with debounce
-    let resizeTimer: NodeJS.Timeout;
+    // Add resize listener with basic debounce
+    let resizeTimer;
     const handleResize = () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(checkMobile, 100);
@@ -30,13 +30,12 @@ export function useIsMobile() {
     
     window.addEventListener('resize', handleResize);
     
-    // Add orientation change listener for mobile devices
+    // Handle orientation changes on mobile
     window.addEventListener('orientationchange', () => {
-      // Short delay to allow orientation change to complete
       setTimeout(checkMobile, 200);
     });
     
-    // Cleanup
+    // Clean up
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', checkMobile);
@@ -44,6 +43,6 @@ export function useIsMobile() {
     };
   }, []);
 
-  // During SSR or before hydration, assume mobile first
+  // During SSR/before mount, use mobile-first approach
   return mounted ? isMobile : true;
 }
