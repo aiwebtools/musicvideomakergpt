@@ -63,20 +63,30 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Cyberpunk theme colors
+				// Divine theme colors
 				neon: {
-					pink: '#FF00FF',
-					blue: '#00FFFF',
-					purple: '#B026FF',
-					yellow: '#FFFF00',
+					pink: '#ff6b9d',
+					blue: '#12c2e9',
+					purple: '#c471ed',
+					cyan: '#64ffda',
+					yellow: '#ffd700',
+					orange: '#ff9500',
 				},
 				cyber: {
 					dark: '#0a0a15',
 					darker: '#050510',
-					primary: '#4361ee',
-					accent: '#ff00ff',
-					secondary: '#00ffff',
-					tertiary: '#7b2cbf',
+					primary: '#c471ed',
+					accent: '#ff6b9d',
+					secondary: '#12c2e9',
+					tertiary: '#9333ea',
+				},
+				divine: {
+					dark: '#0a0a15',
+					purple: '#9333ea',
+					blue: '#3b82f6',
+					pink: '#ec4899',
+					cyan: '#06b6d4',
+					gold: '#ffd700',
 				}
 			},
 			borderRadius: {
@@ -95,7 +105,7 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': { filter: 'brightness(1)' },
-					'50%': { filter: 'brightness(1.2)' },
+					'50%': { filter: 'brightness(1.5)' },
 				},
 				'pulse-soft': {
 					'0%, 100%': { opacity: '.8' },
@@ -103,7 +113,7 @@ export default {
 				},
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-10px)' },
+					'50%': { transform: 'translateY(-15px)' },
 				},
 				'spin-slow': {
 					'0%': { transform: 'rotate(0deg)' },
@@ -122,6 +132,49 @@ export default {
 					'0%': { opacity: '0', transform: 'translateY(10px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' },
 				},
+				// Divine animations
+				'divine-glow': {
+					'0%, 100%': { 
+						filter: 'brightness(1) saturate(1)',
+						boxShadow: '0 0 50px rgba(147, 51, 234, 0.3)'
+					},
+					'50%': { 
+						filter: 'brightness(1.8) saturate(1.5)',
+						boxShadow: '0 0 100px rgba(147, 51, 234, 0.6)'
+					},
+				},
+				'divine-pulse': {
+					'0%, 100%': { opacity: '0.8', transform: 'scale(1)' },
+					'50%': { opacity: '1', transform: 'scale(1.1)' },
+				},
+				'divine-float': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'50%': { transform: 'translateY(-30px) rotate(180deg)' },
+				},
+				'divine-shimmer': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+				},
+				'text-shimmer': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+				},
+				'gradient-shift': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+				},
+				'glow-intense': {
+					'0%, 100%': { filter: 'brightness(1)', transform: 'scale(1)' },
+					'50%': { filter: 'brightness(2)', transform: 'scale(1.1)' },
+				},
+				'pulse-divine': {
+					'0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+					'50%': { opacity: '1', transform: 'scale(1.2)' },
+				},
+				'float-slow': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'50%': { transform: 'translateY(-25px) rotate(180deg)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -133,10 +186,21 @@ export default {
 				'neon-flicker': 'neon-flicker 2s infinite',
 				'shimmer': 'shimmer 3s linear infinite',
 				'fade-in': 'fade-in 0.3s ease-out',
+				// Divine animations
+				'divine-glow': 'divine-glow 4s ease-in-out infinite',
+				'divine-pulse': 'divine-pulse 3s ease-in-out infinite',
+				'divine-float': 'divine-float 8s ease-in-out infinite',
+				'divine-shimmer': 'divine-shimmer 4s ease infinite',
+				'text-shimmer': 'text-shimmer 3s ease infinite',
+				'gradient-shift': 'gradient-shift 15s ease infinite',
+				'glow-intense': 'glow-intense 2s ease-in-out infinite',
+				'pulse-divine': 'pulse-divine 4s ease-in-out infinite',
+				'float-slow': 'float-slow 10s ease-in-out infinite',
 			},
 			backgroundImage: {
 				'cyber-grid': "url('/images/cyber-grid.png')",
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'divine-gradient': 'linear-gradient(135deg, #9333ea, #3b82f6, #ec4899, #06b6d4)',
 			},
 			fontFamily: {
 				cyber: ['Orbitron', 'sans-serif'],
