@@ -13,18 +13,13 @@ export const LegalSection = () => {
           Privacy Policy
         </a>
         <a 
-          href="https://aiwebtools.lovable.app/disclaimers" 
+          href="https://aiwebtools.ai/terms-of-services" 
           target="_blank" 
           rel="noopener noreferrer"
           className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
         >
           Terms of Service
         </a>
-      </div>
-      <div className="mt-4 pt-3 border-t border-neon-purple/30">
-        <p className="text-xs text-gray-400">
-          This website is for informational, educational, and research purposes only.
-        </p>
       </div>
     </div>
   );

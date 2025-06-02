@@ -1,46 +1,29 @@
 
 const Disclaimer = () => {
   return (
-    <section id="disclaimer" className="py-24 relative bg-cyber-darker overflow-hidden">
-      {/* Divine background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-pink-900/20 animate-gradient-shift"></div>
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-neon-purple to-transparent animate-shimmer"></div>
-      <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full blur-xl animate-float-slow"></div>
-      <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-2xl animate-pulse-divine"></div>
-      <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-r from-yellow-400/30 to-orange-400/30 rounded-full blur-lg animate-glow-intense"></div>
+    <section id="disclaimer" className="py-24 relative bg-cyber-darker">
+      {/* Background elements */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-neon-purple to-transparent"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-300 via-blue-300 to-cyan-300 animate-text-shimmer drop-shadow-2xl">
+      <div className="container mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
             Legal Disclaimer
           </h2>
-          <p className="text-xl text-gray-200 drop-shadow-lg">
+          <p className="text-lg text-gray-300">
             Important information about using Music Video Maker GPT and the content it generates.
           </p>
         </div>
         
-        <div className="glass-divine border border-gradient-divine rounded-2xl p-12 max-w-5xl mx-auto relative overflow-hidden shadow-divine">
-          {/* Divine glow effects */}
-          <div className="absolute -top-20 -left-20 w-40 h-40 bg-gradient-to-r from-pink-400/30 to-purple-400/30 rounded-full blur-3xl animate-pulse-divine"></div>
-          <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-r from-blue-400/30 to-cyan-400/30 rounded-full blur-3xl animate-glow-intense"></div>
-          
-          <div className="space-y-8 text-gray-200 relative z-10">
-            <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-4 border border-purple-300/20">
-              <p className="text-sm font-medium text-purple-200 mb-2">
-                Website Disclaimer
-              </p>
-              <p className="text-sm text-gray-300">
-                This website is for informational, educational, and research purposes only.
-              </p>
-            </div>
-            
-            <h3 className="text-2xl font-bold text-white drop-shadow-lg">Terms of Use</h3>
-            <p className="text-lg leading-relaxed">
+        <div className="glass border border-neon-purple/30 rounded-xl p-8 max-w-4xl mx-auto">
+          <div className="space-y-6 text-gray-300">
+            <h3 className="text-xl font-bold text-white">Terms of Use</h3>
+            <p>
               Music Video Maker GPT is an AI-powered tool for generating music video scenes. By using this service, you agree to the following terms:
             </p>
             
-            <h4 className="text-xl font-semibold text-white mt-8 drop-shadow-md">Content Generation & Ownership</h4>
-            <ul className="list-disc pl-8 space-y-3 text-lg leading-relaxed">
+            <h4 className="text-lg font-semibold text-white mt-6">Content Generation & Ownership</h4>
+            <ul className="list-disc pl-6 space-y-2">
               <li>
                 All content generated through Music Video Maker GPT is created using AI technology. The service does not guarantee uniqueness of the content.
               </li>
@@ -52,8 +35,8 @@ const Disclaimer = () => {
               </li>
             </ul>
             
-            <h4 className="text-xl font-semibold text-white mt-8 drop-shadow-md">Usage Restrictions</h4>
-            <ul className="list-disc pl-8 space-y-3 text-lg leading-relaxed">
+            <h4 className="text-lg font-semibold text-white mt-6">Usage Restrictions</h4>
+            <ul className="list-disc pl-6 space-y-2">
               <li>
                 You may not use Music Video Maker GPT to generate content that is illegal, harmful, threatening, abusive, tortious, defamatory, or otherwise objectionable.
               </li>
@@ -65,18 +48,18 @@ const Disclaimer = () => {
               </li>
             </ul>
             
-            <h4 className="text-xl font-semibold text-white mt-8 drop-shadow-md">Liability Limitations</h4>
-            <p className="text-lg leading-relaxed">
+            <h4 className="text-lg font-semibold text-white mt-6">Liability Limitations</h4>
+            <p>
               Music Video Maker GPT and its affiliates shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses resulting from using our service or any content generated through it.
             </p>
             
-            <h4 className="text-xl font-semibold text-white mt-8 drop-shadow-md">Privacy Policy</h4>
-            <p className="text-lg leading-relaxed">
-              Images uploaded for music video creation are used solely during your session and are not stored after completion. Your privacy and data protection are important to us. For detailed information, please refer to our <a href="https://openai.com/policies/privacy-policy/" className="text-cyan-300 hover:text-cyan-200 underline decoration-cyan-300/50 hover:decoration-cyan-200" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+            <h4 className="text-lg font-semibold text-white mt-6">Privacy Policy</h4>
+            <p>
+              Images uploaded for music video creation are used solely during your session and are not stored after completion. Your privacy and data protection are important to us. For detailed information, please refer to our <a href="https://openai.com/policies/privacy-policy/" className="text-neon-blue hover:underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
             </p>
             
-            <p className="mt-8 text-lg leading-relaxed">
-              By using Music Video Maker GPT, you acknowledge that you have read, understood, and agree to be bound by these terms. We reserve the right to modify these terms at any time. For complete terms and conditions, visit our <a href="https://aiwebtools.lovable.app/disclaimers" className="text-cyan-300 hover:text-cyan-200 underline decoration-cyan-300/50 hover:decoration-cyan-200" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
+            <p className="mt-6">
+              By using Music Video Maker GPT, you acknowledge that you have read, understood, and agree to be bound by these terms. We reserve the right to modify these terms at any time.
             </p>
           </div>
         </div>
