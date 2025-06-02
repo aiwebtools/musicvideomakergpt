@@ -59,7 +59,7 @@ const Disclaimer = () => {
             </p>
             
             <p className="mt-6">
-              By using Music Video Maker GPT, you acknowledge that you have read, understood, and agree to be bound by these terms. We reserve the right to modify these terms at any time.
+              By using Music Video Maker GPT, you acknowledge that you have read, understood, and agree to be bound by these terms. We reserve the right to modify these terms at any time. For complete terms and conditions, please visit our <a href="https://aiwebtools.lovable.app/disclaimers" className="text-neon-blue hover:underline" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
             </p>
           </div>
         </div>

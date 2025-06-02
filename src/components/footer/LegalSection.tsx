@@ -13,7 +13,7 @@ export const LegalSection = () => {
           Privacy Policy
         </a>
         <a 
-          href="https://aiwebtools.ai/terms-of-services" 
+          href="https://aiwebtools.lovable.app/disclaimers" 
           target="_blank" 
           rel="noopener noreferrer"
           className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1"
