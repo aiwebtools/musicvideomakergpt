@@ -1,13 +1,21 @@
 
-# Allow all web crawlers
+# Allow all web crawlers to index everything
 User-agent: *
 Allow: /
 
 # Specific instructions for major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
 
 User-agent: Twitterbot
@@ -16,5 +24,21 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# Sitemap location (uncomment and update when you have a sitemap)
-# Sitemap: https://musicvideomakerstudio.com/sitemap.xml
+User-agent: LinkedInBot
+Allow: /
+
+# Block AI training crawlers (optional - remove if you want AI training)
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://musicvideomakerstudio.com/sitemap.xml
+
+# Additional crawl optimization
+Crawl-delay: 1

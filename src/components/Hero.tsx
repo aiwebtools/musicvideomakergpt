@@ -31,22 +31,24 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-4 md:space-y-6 text-center lg:text-left">
-            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight ${isMobile ? 'text-center' : ''}`}>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
-                Music Video Maker Studio
-              </span>
-            </h1>
-            
-            <div className={`inline-block p-1 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue rounded-lg mb-2 mt-2 ${isMobile ? 'mx-auto' : ''}`}>
-              <div className="px-3 py-1 bg-cyber-darker/80 rounded text-sm font-medium text-white">
-                Full-Blown Music Video & Music Production Creative Suite
+            <header>
+              <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight ${isMobile ? 'text-center' : ''}`}>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
+                  Music Video Maker Studio
+                </span>
+              </h1>
+              
+              <div className={`inline-block p-1 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue rounded-lg mb-2 mt-2 ${isMobile ? 'mx-auto' : ''}`}>
+                <div className="px-3 py-1 bg-cyber-darker/80 rounded text-sm font-medium text-white">
+                  AI Web Tools - Full-Blown Music Video & Music Production Creative Suite
+                </div>
               </div>
-            </div>
+            </header>
             
             <p className={`text-lg text-gray-300 max-w-xl ${isMobile ? 'mx-auto text-center' : ''}`}>
-              Transform yourself into the star of cinematic-quality music videos with our cutting-edge AI director. 
+              Transform yourself into the star of cinematic-quality music videos with our cutting-edge <strong>AI web tools</strong>. 
               Build scene-by-scene visuals where <span className="text-neon-purple">you and even your band</span> are featured in vivid, 
-              realistic scenes tied to your music.
+              realistic scenes tied to your music using advanced <strong>artificial intelligence</strong>.
             </p>
             
             <div className={`flex flex-wrap gap-4 pt-2 ${isMobile ? 'justify-center' : ''}`}>
@@ -55,6 +57,7 @@ const Hero = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="golden-button flex items-center gap-2 text-lg"
+                aria-label="Access Music Video Maker GPT - AI Web Tools"
               >
                 <Music4 className="h-5 w-5" />
                 <span>Music Video Maker GPT</span>
@@ -65,14 +68,14 @@ const Hero = () => {
                 className="border-neon-purple text-neon-purple hover:bg-neon-purple/20 hover:border-neon-purple rounded-full px-6 py-5 text-base"
                 asChild
               >
-                <a href="#how-it-works">
+                <a href="#how-it-works" aria-label="Learn how our AI video creation works">
                   How It Works
                 </a>
               </Button>
             </div>
             
             <div className={`text-sm text-gray-400 pt-1 ${isMobile ? 'text-center' : ''}`}>
-              <p>Powered by GPT-4o for high-fidelity image generation</p>
+              <p>Powered by GPT-4o for high-fidelity image generation | <strong>AI Web Tools</strong></p>
             </div>
           </div>
           
@@ -82,12 +85,12 @@ const Hero = () => {
                 ref={videoRef}
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/rBQTUrvHcR8?autoplay=1&mute=0&enablejsapi=1&origin=https://musicvideomakerstudio.com&playlist=rBQTUrvHcR8&loop=1"
-                title="Music Video Maker Studio Demo"
+                title="Music Video Maker Studio Demo - AI Web Tools Video Creation"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
               <div className="absolute bottom-4 right-4 bg-black/70 px-2 py-1 rounded text-xs text-white">
-                Music Video Based On a True Story
+                AI-Generated Music Video Demo
               </div>
             </div>
             

@@ -13,32 +13,32 @@ const Features = () => {
     {
       icon: <UploadCloud className="h-10 w-10 text-neon-purple" />,
       title: "Upload Your Image",
-      description: "Start by uploading a high-quality image of yourself or the lead artist. Your privacy is protected - images are only used during your session."
+      description: "Start by uploading a high-quality image of yourself or the lead artist. Our AI web tools ensure your privacy is protected - images are only used during your session."
     },
     {
       icon: <VideoIcon className="h-10 w-10 text-neon-blue" />,
-      title: "Choose Your Style",
-      description: "Select from a variety of video styles including Dreamy Fantasy, Urban Grit, Cyberpunk Neon, Vintage Retro, Romance, and more."
+      title: "Choose Your AI Video Style",
+      description: "Select from a variety of AI-generated video styles including Dreamy Fantasy, Urban Grit, Cyberpunk Neon, Vintage Retro, Romance, and more with our advanced AI tools."
     },
     {
       icon: <PenTool className="h-10 w-10 text-neon-pink" />,
-      title: "Scene Planning",
-      description: "Create a structured outline for your music video with settings, actions, mood, atmosphere, props, and costumes for each scene."
+      title: "AI Scene Planning",
+      description: "Create a structured outline for your music video with AI-powered settings, actions, mood, atmosphere, props, and costumes for each scene using cutting-edge artificial intelligence."
     },
     {
       icon: <Image className="h-10 w-10 text-neon-purple" />,
       title: "AI Image Generation",
-      description: "Our AI generates cinematic-grade images for each scene with you seamlessly integrated, maintaining perfect visual continuity."
+      description: "Our AI web tools generate cinematic-grade images for each scene with you seamlessly integrated, maintaining perfect visual continuity through advanced machine learning."
     },
     {
       icon: <Music className="h-10 w-10 text-neon-blue" />,
-      title: "Band Performance Scenes",
-      description: "Every third scene showcases your band performing with consistent members, attire, and facial features across all scenes."
+      title: "AI Band Performance Scenes",
+      description: "Every third scene showcases your band performing with consistent members, attire, and facial features across all scenes powered by AI technology."
     },
     {
       icon: <Layout className="h-10 w-10 text-neon-pink" />,
-      title: "Final Assembly",
-      description: "Get a complete storyboard with scene-by-scene images, plus optional extras like a music video poster or behind-the-scenes photos."
+      title: "Final AI Assembly",
+      description: "Get a complete AI-generated storyboard with scene-by-scene images, plus optional extras like a music video poster or behind-the-scenes photos."
     },
   ];
 
@@ -52,16 +52,16 @@ const Features = () => {
       <div className="container mx-auto px-4 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
-            Features & Capabilities
+            AI Web Tools Features & Capabilities
           </h2>
           <p className="text-lg text-gray-300">
-            Music Video Maker GPT combines cutting-edge AI technology with cinematic expertise to create professional-quality music videos featuring you as the star.
+            Music Video Maker GPT combines cutting-edge <strong>AI web tools</strong> and <strong>artificial intelligence technology</strong> with cinematic expertise to create professional-quality music videos featuring you as the star using advanced AI tools.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuresData.map((feature, index) => (
-            <div 
+            <article 
               key={index} 
               className="glass border border-neon-purple/30 rounded-xl p-6 hover:border-neon-purple/70 transition-all duration-300 hover:transform hover:translate-y-[-5px]"
             >
@@ -70,7 +70,7 @@ const Features = () => {
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </div>
