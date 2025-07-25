@@ -83,7 +83,7 @@ const Hero = () => {
               <iframe
                 ref={videoRef}
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/rBQTUrvHcR8?autoplay=1&mute=1&enablejsapi=1&origin=https://musicvideomakerstudio.com&playlist=rBQTUrvHcR8&loop=1"
+                src="https://www.youtube.com/embed/rBQTUrvHcR8?autoplay=1&mute=0&enablejsapi=1&origin=https://musicvideomakerstudio.com&hd=1"
                 title="Music Video Maker Studio Demo - AI Web Tools Video Creation"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
