@@ -46,9 +46,8 @@ const Hero = () => {
             </header>
             
             <p className={`text-lg text-gray-300 max-w-xl ${isMobile ? 'mx-auto text-center' : ''}`}>
-              Transform yourself into the star of cinematic-quality music videos with our cutting-edge <strong>AI web tools</strong>. 
-              Build scene-by-scene visuals where <span className="text-neon-purple">you and even your band</span> are featured in vivid, 
-              realistic scenes tied to your music using advanced <strong>artificial intelligence</strong>.
+              Create professional <strong>music videos</strong> where you're the star. Upload your photo, choose your style, 
+              and generate cinematic scenes featuring you with our <strong>AI music video maker</strong>.
             </p>
             
             <div className={`flex flex-wrap gap-4 pt-2 ${isMobile ? 'justify-center' : ''}`}>
@@ -75,7 +74,7 @@ const Hero = () => {
             </div>
             
             <div className={`text-sm text-gray-400 pt-1 ${isMobile ? 'text-center' : ''}`}>
-              <p>Powered by GPT-4o for high-fidelity image generation | <strong>AI Web Tools</strong></p>
+              <p>Professional music video creation | GPT-4o powered</p>
             </div>
           </div>
           

@@ -7,28 +7,28 @@ const HowItWorks = () => {
   
   const steps = [
     {
-      title: "Upload Your Image",
-      description: "Start by uploading a clear, high-quality image of yourself or the lead artist who will star in the music video.",
+      title: "Upload Your Photo",
+      description: "Upload a clear photo of yourself to become the star of your music video.",
       image: "/placeholder.svg"
     },
     {
-      title: "Choose Your Style & Vibe",
-      description: "Select from various styles like Dreamy Fantasy, Urban Grit, Cyberpunk Neon, Vintage Retro, Romance, and more to set the tone for your music video.",
+      title: "Choose Music Video Style",
+      description: "Select your preferred music video style from our collection of cinematic themes.",
       image: "/placeholder.svg"
     },
     {
-      title: "Create Your Scene Outline",
-      description: "Work with the AI to develop a structured outline specifying settings, actions, mood, and costume changes for each scene in your music video.",
+      title: "Plan Your Music Video",
+      description: "Create scene outlines with settings, actions, and costume changes for your music video.",
       image: "/placeholder.svg"
     },
     {
-      title: "Generate Images",
-      description: "The AI creates high-quality, cinematic images for each scene featuring you as the star, with perfect continuity between scenes.",
+      title: "Generate Video Scenes",
+      description: "AI creates high-quality images for each music video scene featuring you as the star.",
       image: "/placeholder.svg"
     },
     {
-      title: "Animate Your Storyboard",
-      description: "Use our recommended tools like Sora and KlingAI to animate your images and create a dynamic music video with your generated scenes.",
+      title: "Animate Your Music Video",
+      description: "Use recommended tools like Sora and KlingAI to animate your scenes into a complete music video.",
       image: "/placeholder.svg"
     }
   ];
@@ -42,10 +42,10 @@ const HowItWorks = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
-            How It Works
+            Create Your Music Video
           </h2>
           <p className="text-lg text-gray-300">
-            Creating your professional music video with Music Video Maker GPT is easy and intuitive. Follow these steps to become the star of your own music video.
+            Simple 5-step process to create professional music videos featuring yourself as the star.
           </p>
         </div>
         

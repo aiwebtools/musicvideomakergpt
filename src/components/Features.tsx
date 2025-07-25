@@ -12,33 +12,33 @@ const Features = () => {
   const featuresData = [
     {
       icon: <UploadCloud className="h-10 w-10 text-neon-purple" />,
-      title: "Upload Your Image",
-      description: "Start by uploading a high-quality image of yourself or the lead artist. Our AI web tools ensure your privacy is protected - images are only used during your session."
+      title: "Upload Your Photo",
+      description: "Upload a clear photo of yourself to become the star of your music video. Privacy protected - images only used during your session."
     },
     {
       icon: <VideoIcon className="h-10 w-10 text-neon-blue" />,
-      title: "Choose Your AI Video Style",
-      description: "Select from a variety of AI-generated video styles including Dreamy Fantasy, Urban Grit, Cyberpunk Neon, Vintage Retro, Romance, and more with our advanced AI tools."
+      title: "Choose Video Style",
+      description: "Select from music video styles: Dreamy Fantasy, Urban Grit, Cyberpunk Neon, Vintage Retro, Romance, and more."
     },
     {
       icon: <PenTool className="h-10 w-10 text-neon-pink" />,
-      title: "AI Scene Planning",
-      description: "Create a structured outline for your music video with AI-powered settings, actions, mood, atmosphere, props, and costumes for each scene using cutting-edge artificial intelligence."
+      title: "Music Video Planning",
+      description: "Create scene-by-scene music video outlines with settings, actions, mood, and costume changes for each shot."
     },
     {
       icon: <Image className="h-10 w-10 text-neon-purple" />,
-      title: "AI Image Generation",
-      description: "Our AI web tools generate cinematic-grade images for each scene with you seamlessly integrated, maintaining perfect visual continuity through advanced machine learning."
+      title: "Generate Video Scenes",
+      description: "Generate high-quality images for each music video scene with you seamlessly integrated as the lead performer."
     },
     {
       icon: <Music className="h-10 w-10 text-neon-blue" />,
-      title: "AI Band Performance Scenes",
-      description: "Every third scene showcases your band performing with consistent members, attire, and facial features across all scenes powered by AI technology."
+      title: "Band Performance Shots",
+      description: "Create consistent band performance scenes throughout your music video with matching members, outfits, and staging."
     },
     {
       icon: <Layout className="h-10 w-10 text-neon-pink" />,
-      title: "Final AI Assembly",
-      description: "Get a complete AI-generated storyboard with scene-by-scene images, plus optional extras like a music video poster or behind-the-scenes photos."
+      title: "Complete Music Video Kit",
+      description: "Get a full music video storyboard with scene images, plus optional extras like video posters and behind-the-scenes shots."
     },
   ];
 
@@ -52,10 +52,10 @@ const Features = () => {
       <div className="container mx-auto px-4 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
-            AI Web Tools Features & Capabilities
+            Music Video Creation Features
           </h2>
           <p className="text-lg text-gray-300">
-            Music Video Maker GPT combines cutting-edge <strong>AI web tools</strong> and <strong>artificial intelligence technology</strong> with cinematic expertise to create professional-quality music videos featuring you as the star using advanced AI tools.
+            Everything you need to create professional <strong>music videos</strong> featuring yourself as the star performer.
           </p>
         </div>
         
