@@ -34,7 +34,7 @@ export const OtherToolsDropdown = () => {
             rel="noopener noreferrer"
             className="w-full"
           >
-            Stage Master AI Suite
+            Stage Master AI Suite for the Performing Arts
           </a>
         </DropdownMenuItem>
       </DropdownMenuContent>

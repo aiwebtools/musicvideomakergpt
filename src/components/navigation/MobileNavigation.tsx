@@ -124,7 +124,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
                   className="block text-white py-2 px-3 rounded-md text-center bg-black border border-neon-purple text-base"
                   onClick={onClose}
                 >
-                  Stage Master AI Suite
+                  Stage Master AI Suite for the Performing Arts
                 </a>
               </div>
             </div>
