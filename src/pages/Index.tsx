@@ -90,6 +90,36 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* AI Music Video Example */}
+        <section className="py-12 md:py-16 px-4 overflow-hidden relative">
+          <div className="container mx-auto">
+            <div className="flex flex-col items-center justify-center">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  100% AI + Human Creativity
+                </h3>
+                <p className="text-lg text-white/80">
+                  Example of a music video made with AI and human creativity
+                </p>
+              </div>
+              <div className={`${isMobile ? 'w-full' : 'max-w-4xl w-full'}`}>
+                <div className="relative rounded-2xl overflow-hidden border-4 border-neon-purple/30 shadow-2xl shadow-neon-purple/30">
+                  <div className="relative pb-[56.25%] h-0">
+                    <iframe
+                      src="https://www.youtube.com/embed/m2crGAhbs5g"
+                      title="AI Music Video Example"
+                      className="absolute top-0 left-0 w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       
       <Footer />
