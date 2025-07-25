@@ -127,10 +127,10 @@ const Index = () => {
             <div className="flex flex-col items-center justify-center">
               <div className="text-center mb-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                  Another AI Music Video Creation
+                  100% AI + Human Creativity
                 </h3>
                 <p className="text-lg text-white/80">
-                  More examples of AI-powered music video production
+                  Example of a music video made with AI and human creativity
                 </p>
               </div>
               <div className={`${isMobile ? 'w-full' : 'max-w-4xl w-full'}`}>
