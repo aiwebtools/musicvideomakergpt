@@ -121,7 +121,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
                   href="https://stagemasterai.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block text-white py-4 px-6 rounded-xl text-center glass-hover border border-neon-purple/50 text-base font-semibold hover:scale-105 transition-all duration-300 hover:shadow-glow"
+                  className="block text-white py-2 px-3 rounded-md text-center bg-black border border-neon-purple text-base"
                   onClick={onClose}
                 >
                   Stage Master AI Suite for the Performing Arts

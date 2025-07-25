@@ -63,18 +63,13 @@ const Features = () => {
           {featuresData.map((feature, index) => (
             <article 
               key={index} 
-              className="glass-hover rounded-2xl p-8 group card-hover animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="glass border border-neon-purple/30 rounded-xl p-6 hover:border-neon-purple/70 transition-all duration-300 hover:transform hover:translate-y-[-5px]"
             >
-              <div className="mb-6 p-3 rounded-xl bg-gradient-to-br from-white/10 to-white/5 w-fit group-hover:scale-110 transition-transform duration-300">
+              <div className="mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-display font-bold mb-4 text-white group-hover:text-neon-blue transition-colors duration-300">
-                {feature.title}
-              </h3>
-              <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                {feature.description}
-              </p>
+              <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
             </article>
           ))}
         </div>

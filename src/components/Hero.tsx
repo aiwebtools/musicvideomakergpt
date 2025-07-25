@@ -23,31 +23,31 @@ const Hero = () => {
   }, []);
   
   return (
-    <section className="relative overflow-hidden pt-32 md:pt-44 pb-16 md:pb-20">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark/90 to-cyber-darker"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-tertiary/20 rounded-full blur-[100px]"></div>
+    <section className="relative overflow-hidden pt-28 md:pt-40 pb-16 md:pb-20">
+      {/* Background elements - removed static grid in favor of CyberGrid component */}
+      <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark/90 to-cyber-darker -z-10"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-tertiary/20 rounded-full blur-[100px] -z-10"></div>
       
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-4 md:space-y-6 text-center lg:text-left">
             <header>
-              <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight ${isMobile ? 'text-center' : ''} animate-fade-in-up`}>
-                <span className="text-gradient">
+              <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight ${isMobile ? 'text-center' : ''}`}>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue">
                   Music Video Maker Studio
                 </span>
               </h1>
               
-              <div className={`inline-block p-1 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue rounded-lg mb-2 mt-2 ${isMobile ? 'mx-auto' : ''} animate-pulse-glow`}>
-                <div className="px-4 py-2 bg-cyber-darker/90 rounded text-sm font-medium text-white backdrop-blur-sm">
+              <div className={`inline-block p-1 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue rounded-lg mb-2 mt-2 ${isMobile ? 'mx-auto' : ''}`}>
+                <div className="px-3 py-1 bg-cyber-darker/80 rounded text-sm font-medium text-white">
                   AI Web Tools - Full-Blown Music Video & Music Production Creative Suite
                 </div>
               </div>
             </header>
             
-            <p className={`text-lg text-gray-300 max-w-xl ${isMobile ? 'mx-auto text-center' : ''} animate-fade-in leading-relaxed`}>
-              Create professional <strong className="text-neon-blue">music videos</strong> where you're the star. Upload your photo, choose your style, 
-              and generate cinematic scenes featuring you with our <strong className="text-neon-purple">AI music video maker</strong>.
+            <p className={`text-lg text-gray-300 max-w-xl ${isMobile ? 'mx-auto text-center' : ''}`}>
+              Create professional <strong>music videos</strong> where you're the star. Upload your photo, choose your style, 
+              and generate cinematic scenes featuring you with our <strong>AI music video maker</strong>.
             </p>
             
             <div className={`flex flex-wrap gap-4 pt-2 ${isMobile ? 'justify-center' : ''}`}>
@@ -78,18 +78,17 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="relative mt-6 md:mt-0 animate-slide-in-right">
-            <div className="aspect-video rounded-2xl overflow-hidden border-2 border-neon-purple/50 neon-glow relative group">
+          <div className="relative mt-6 md:mt-0">
+            <div className="aspect-video rounded-lg overflow-hidden border-2 border-neon-purple neon-glow">
               <iframe
                 ref={videoRef}
-                className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-full"
                 src="https://www.youtube.com/embed/rBQTUrvHcR8?autoplay=1&mute=0&enablejsapi=1&origin=https://musicvideomakerstudio.com&hd=1"
                 title="Music Video Maker Studio Demo - AI Web Tools Video Creation"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-              <div className="absolute bottom-4 right-4 glass px-3 py-2 rounded-lg text-xs text-white/90 font-medium">
+              <div className="absolute bottom-4 right-4 bg-black/70 px-2 py-1 rounded text-xs text-white">
                 AI-Generated Music Video Demo
               </div>
             </div>
