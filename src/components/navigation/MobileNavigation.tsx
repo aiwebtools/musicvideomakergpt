@@ -130,7 +130,7 @@ const MobileNavigation = ({ isMenuOpen, onClose }: MobileNavigationProps) => {
             </div>
 
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="block text-white bg-neon-purple py-3 text-center font-medium rounded-md text-base mt-4"

@@ -33,7 +33,7 @@ const DesktopNavigation = () => {
       <OtherToolsDropdown />
 
       <a 
-        href="https://www.aiwebtools.ai" 
+        href="https://aiwebtools.lovable.app/?via=aiwebtools" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="font-medium bg-black/40 border border-neon-yellow/70 text-white hover:bg-neon-yellow/30 hover:border-neon-yellow rounded-md px-4 py-2 transition-all duration-200"
