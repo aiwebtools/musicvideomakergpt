@@ -16,7 +16,7 @@ export const FooterLogo = () => {
         <h3 className="text-xl font-bold font-audiowide golden-text">Music Video Maker Studio</h3>
       </div>
       <a 
-        href="https://www.aiwebtools.ai" 
+        href="https://aiwebtools.lovable.app/?via=aiwebtools" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="text-xs text-gray-400 hover:text-neon-purple transition-colors duration-300 ml-10 -mt-1"
